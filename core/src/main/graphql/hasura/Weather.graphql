@@ -1,0 +1,8 @@
+query getWeather($lat:Float, $lng:Float) {
+    weather(where: {lat: {_eq: $lat}, lng: {_eq: $lng}}) {
+        currently {
+            icon
+            time
+        }
+    }
+}

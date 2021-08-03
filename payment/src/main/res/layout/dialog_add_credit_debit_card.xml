@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/defaultDialogTopMargin"
+        android:background="@drawable/bg_border_dialog">
+
+        <namit.retail_app.core.presentation.widget.IconWithTitleToolbar
+            android:id="@+id/iconWithTitleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/addNewCardScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/addButton"
+            app:layout_constraintTop_toBottomOf="@id/iconWithTitleToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardConstraintLayout"
+                    android:layout_width="272dp"
+                    android:layout_height="159dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/img_card_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/currentCardNumberHideTextView"
+                        style="@style/H3.White"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="29dp"
+                        android:layout_marginTop="33dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLength="19"
+                        app:layout_constraintEnd_toStartOf="@id/currentCardNumberTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/currentCardNumberTextView"
+                        style="@style/H3.White"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="14dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLength="19"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/currentCardNumberHideTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/currentCardNumberHideTextView"
+                        app:layout_constraintTop_toTopOf="@+id/currentCardNumberHideTextView" />
+
+                    <TextView
+                        android:id="@+id/cardHolderNameTextView"
+                        style="@style/P3.White"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_holder_name"
+                        app:layout_constraintBottom_toTopOf="@+id/currentCardNameTextView"
+                        app:layout_constraintStart_toStartOf="@+id/currentCardNumberHideTextView" />
+
+                    <TextView
+                        android:id="@+id/currentCardNameTextView"
+                        style="@style/P2.White"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/defaultViewLittleMargin"
+                        android:layout_marginBottom="15dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="@string/card_name_hint"
+                        android:textAllCaps="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/currentCardIconImageView"
+                        app:layout_constraintStart_toStartOf="@+id/cardHolderNameTextView"
+                        tools:text="Nestor Sanchez" />
+
+                    <ImageView
+                        android:id="@+id/currentCardIconImageView"
+                        android:layout_width="58dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="28dp"
+                        android:scaleType="centerInside"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/currentCardNameTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/cardNameTextView"
+                    style="@style/H5.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/card_name"
+                    app:layout_constraintTop_toBottomOf="@id/cardConstraintLayout" />
+
+                <EditText
+                    android:id="@+id/cardNameEditText"
+                    style="@style/DefaultEditText.H3.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:hint="@string/card_name_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="40"
+                    app:layout_constraintEnd_toEndOf="@id/cardNameTextView"
+                    app:layout_constraintStart_toStartOf="@id/cardNameTextView"
+                    app:layout_constraintTop_toBottomOf="@id/cardNameTextView" />
+
+                <View
+                    android:id="@+id/cardNameViewLine"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3.5dp"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toEndOf="@id/cardNameEditText"
+                    app:layout_constraintStart_toStartOf="@id/cardNameEditText"
+                    app:layout_constraintTop_toBottomOf="@id/cardNameEditText" />
+
+                <TextView
+                    android:id="@+id/invalidNameTextView"
+                    style="@style/P3.SunsetOrange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/please_input_name_and_surname"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardNameViewLine" />
+
+                <TextView
+                    android:id="@+id/cardNumberTextView"
+                    style="@style/H5.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="13.5dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/credit_card_number"
+                    app:layout_constraintTop_toBottomOf="@id/invalidNameTextView" />
+
+                <EditText
+                    android:id="@+id/cardNumberEditText"
+                    style="@style/DefaultEditText.H3.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:hint="@string/credit_card_number_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberPassword"
+                    android:maxLength="19"
+                    app:layout_constraintEnd_toEndOf="@id/cardNumberTextView"
+                    app:layout_constraintStart_toStartOf="@id/cardNumberTextView"
+                    app:layout_constraintTop_toBottomOf="@id/cardNumberTextView"
+                    tools:ignore="Autofill,TextFields" />
+
+                <View
+                    android:id="@+id/cardNumberViewLine"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3.5dp"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toEndOf="@id/cardNumberEditText"
+                    app:layout_constraintStart_toStartOf="@id/cardNumberEditText"
+                    app:layout_constraintTop_toBottomOf="@id/cardNumberEditText" />
+
+                <TextView
+                    android:id="@+id/invalidCardNumberTextView"
+                    style="@style/P3.SunsetOrange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/invalid_credit_card_number"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardNumberViewLine" />
+
+                <TextView
+                    android:id="@+id/expireDateTextView"
+                    style="@style/H5.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="13.5dp"
+                    android:layout_marginEnd="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:text="@string/card_expire_date"
+                    app:layout_constraintEnd_toStartOf="@id/cvvTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/invalidCardNumberTextView" />
+
+                <TextView
+                    android:id="@+id/cvvTextView"
+                    style="@style/H5.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:layout_marginTop="13.5dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/card_cvv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/expireDateTextView"
+                    app:layout_constraintTop_toBottomOf="@id/invalidCardNumberTextView" />
+
+                <EditText
+                    android:id="@+id/cardExpireDateEditText"
+                    style="@style/DefaultEditText.H3.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:hint="@string/card_expire_date_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberPassword"
+                    android:maxLength="5"
+                    app:layout_constraintEnd_toStartOf="@id/cardCvvEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/expireDateTextView"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <EditText
+                    android:id="@+id/cardCvvEditText"
+                    style="@style/DefaultEditText.H3.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:hint="@string/card_cvv_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cardExpireDateEditText"
+                    app:layout_constraintTop_toBottomOf="@id/expireDateTextView"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <View
+                    android:id="@+id/cardExpireDateViewLine"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="3.5dp"
+                    android:layout_marginEnd="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toStartOf="@id/cardCvvViewLine"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardExpireDateEditText" />
+
+                <TextView
+                    android:id="@+id/invalidExpireDateTextView"
+                    style="@style/P3.SunsetOrange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:text="@string/invalid_expire_date"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toStartOf="@id/invalidCvvTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardExpireDateViewLine" />
+
+                <View
+                    android:id="@+id/cardCvvViewLine"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:layout_marginTop="3.5dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cardExpireDateViewLine"
+                    app:layout_constraintTop_toBottomOf="@id/cardExpireDateEditText" />
+
+                <TextView
+                    android:id="@+id/invalidCvvTextView"
+                    style="@style/P3.SunsetOrange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spaceBetweenViewOnAddCreditCard"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/invalid_cvv"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/invalidExpireDateTextView"
+                    app:layout_constraintTop_toBottomOf="@id/cardCvvViewLine" />
+
+                <TextView
+                    android:id="@+id/setDefaultTitleTextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/set_as_default"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/invalidCvvTextView" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/setDefaultSwitchButton"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    app:kswBackColor="@color/tropicalBlue"
+                    app:kswThumbColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/setDefaultTitleTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/setDefaultTitleTextView"
+                    tools:ignore="RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/defaultScreenBottomSpace"
+                    app:layout_constraintTop_toBottomOf="@+id/setDefaultSwitchButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addButton"
+            style="@style/MaterialTextButton.H1.WhiteDodgerBlueTropicalBlue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/defaultButtonHeight"
+            android:layout_margin="@dimen/defaultViewMargin"
+            android:enabled="false"
+            android:text="@string/add"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addNewCardScrollView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

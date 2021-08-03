@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/catskillWhite"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dodgerBlue"
+                android:visibility="visible"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/bannerRestaurantImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="matrix"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <View
+                    android:id="@id/headerBackgroundView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/bg_gradient_black85_transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/backCollapseImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back_white"
+                    app:layout_constraintBottom_toBottomOf="@+id/restaurantTitleTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/restaurantTitleTextView"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/restaurantTitleTextView"
+                    style="@style/B30.White"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/backCollapseImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Crystal Jade" />
+
+                <TextView
+                    android:id="@+id/distanceTextView"
+                    style="@style/M15.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/estimateTimeDotView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@+id/restaurantTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/restaurantTitleTextView"
+                    tools:text="2.3 km" />
+
+                <View
+                    android:id="@+id/estimateTimeDotView"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_oval_white50"
+                    app:layout_constraintBottom_toBottomOf="@+id/distanceTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/estimateTimeTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/distanceTextView"
+                    app:layout_constraintTop_toTopOf="@+id/distanceTextView" />
+
+                <TextView
+                    android:id="@+id/estimateTimeTextView"
+                    style="@style/M15.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 mins"
+                    app:layout_constraintBottom_toBottomOf="@+id/distanceTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/openCloseTimeDotView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/estimateTimeDotView"
+                    app:layout_constraintTop_toTopOf="@+id/distanceTextView" />
+
+                <View
+                    android:id="@+id/openCloseTimeDotView"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_oval_white50"
+                    app:layout_constraintBottom_toBottomOf="@+id/distanceTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/openCloseTimeTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/estimateTimeTextView"
+                    app:layout_constraintTop_toTopOf="@+id/distanceTextView" />
+
+                <TextView
+                    android:id="@+id/openCloseTimeTextView"
+                    style="@style/M15.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/distanceTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/openCloseTimeDotView"
+                    app:layout_constraintTop_toTopOf="@+id/distanceTextView"
+                    tools:text="7 am - 11 pm" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/restaurantRateLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_white30_6_radius"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="@+id/restaurantTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/distanceTextView">
+
+                    <ImageView
+                        android:id="@+id/rateIconImageView"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_star_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/rateNumberTextView"
+                        style="@style/M15.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="3.5"
+                        app:layout_constraintBottom_toBottomOf="@+id/rateIconImageView"
+                        app:layout_constraintStart_toEndOf="@+id/rateIconImageView"
+                        app:layout_constraintTop_toTopOf="@+id/rateIconImageView" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_oval_white50"
+                        app:layout_constraintBottom_toBottomOf="@+id/rateIconImageView"
+                        app:layout_constraintStart_toEndOf="@+id/rateNumberTextView"
+                        app:layout_constraintTop_toTopOf="@+id/rateIconImageView" />
+
+                    <TextView
+                        android:id="@+id/moneyTextView"
+                        style="@style/M15.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="$$$"
+                        app:layout_constraintBottom_toBottomOf="@+id/rateIconImageView"
+                        app:layout_constraintStart_toEndOf="@+id/divider3"
+                        app:layout_constraintTop_toTopOf="@+id/rateIconImageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/backImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back_black"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/titleToolbar"
+                    style="@style/H2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="Crystal Jade"
+                    tools:text="Restaurant" />
+
+                <ImageView
+                    android:id="@+id/searchToolbarImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_search_black"
+                    android:visibility="invisible"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/restaurantStickyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <namit.retail_app.coupon.presentation.banner.CouponBannerView
+                android:id="@+id/couponBannerView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/botticelli" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rootCategoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_food_root_category" />
+
+            <View
+                android:id="@+id/categoryDividerView"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/athensGray"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/menuFoodFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/spaceView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

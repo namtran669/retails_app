@@ -1,0 +1,7 @@
+apply from: '../base_module_config.gradle'
+
+dependencies {
+    def ext = rootProject.ext
+    implementation project(":core")
+    api ext.omise
+}

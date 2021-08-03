@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.food">
+
+    <application>
+        <activity
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:name="namit.retail_app.food.presentation.main.FoodActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeFresh</string>
+    <string name="update">อัพเดต</string>
+    <string name="close">ปิด</string>
+
+    <string name="detect_root_device_title">ขออภัย</string>
+    <string name="detect_root_device_message">แอปพลิเคชันของเราไม่รองรับอุปกรณ์ของท่าน สอบถามเพิ่มเติม 02–014–2626</string>
+</resources>

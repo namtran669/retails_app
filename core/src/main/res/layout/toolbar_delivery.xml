@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="18dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintBottom_toBottomOf="@+id/screenTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/screenTitleTextView"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/backClickableView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/backImageView"
+        app:layout_constraintEnd_toEndOf="@+id/backImageView"
+        app:layout_constraintStart_toStartOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="@+id/backImageView" />
+
+    <TextView
+        android:id="@+id/screenTitleTextView"
+        style="@style/B30.Trout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Grocery" />
+
+
+    <ImageView
+        android:id="@+id/locationImageView"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_location_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/screenTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/screenTitleTextView"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/locationClickableView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+        app:layout_constraintEnd_toEndOf="@+id/locationImageView"
+        app:layout_constraintStart_toStartOf="@+id/locationImageView"
+        app:layout_constraintTop_toTopOf="@+id/locationImageView" />
+
+    <ImageView
+        android:id="@+id/pinLocationImageView"
+        android:layout_width="9dp"
+        android:layout_height="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_location_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/deliveryTitleTextView"
+        app:layout_constraintStart_toStartOf="@+id/screenTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/deliveryTitleTextView"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/deliveryTitleTextView"
+        style="@style/M15.DodgerBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/delivery_title_toolbar"
+        app:layout_constraintStart_toEndOf="@+id/pinLocationImageView"
+        app:layout_constraintTop_toBottomOf="@+id/screenTitleTextView" />
+
+    <TextView
+        android:id="@+id/addressToolbarTextView"
+        style="@style/M15.Trout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deliveryTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/deliveryTitleTextView"
+        tools:text="5524 Lyla Parkways Apt…" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

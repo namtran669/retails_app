@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintBottom_toBottomOf="@+id/screenTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/screenTitleTextView"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/backClickableView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/backImageView"
+        app:layout_constraintEnd_toEndOf="@+id/backImageView"
+        app:layout_constraintStart_toStartOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="@+id/backImageView" />
+
+    <ImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/bg_circle_onahau"
+        app:layout_constraintBottom_toBottomOf="@+id/backImageView"
+        app:layout_constraintStart_toEndOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="@+id/backImageView"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_freshproduce" />
+
+    <TextView
+        android:id="@+id/screenTitleTextView"
+        style="@style/B26.Trout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/categoryImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Grocery" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/breadcrumbFlexboxLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:alignContent="stretch"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/categoryImageView"
+        app:layout_constraintTop_toBottomOf="@+id/screenTitleTextView">
+
+        <TextView
+            android:id="@+id/firstChildCategoryTextView"
+            style="@style/M15.Trout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/categoryBreadcrumbMarginTop"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/categoryImageView"
+            app:layout_constraintTop_toBottomOf="@+id/screenTitleTextView"
+            tools:text="Fruits"
+            tools:visibility="visible" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

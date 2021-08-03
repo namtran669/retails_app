@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_question"
+    android:maxHeight="300dp"
+    android:minHeight="185dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/H2.Black85"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="5dp"
+        tools:text="Are you at you store? at you store?" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        style="@style/P6.Black50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/defaultViewMargin"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        tools:text="Your current location will be used to complete sign up" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/negativeButton"
+        style="@style/MaterialOutlinedButton.H1.WhiteDodgerBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="18dp"
+        android:minWidth="114dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/positiveButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView"
+        tools:text="No" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/positiveButton"
+        style="@style/MaterialTextButton.H1.WhiteDodgerBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:minWidth="114dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/negativeButton"
+        app:layout_constraintTop_toTopOf="@id/negativeButton"
+        tools:text="Yes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+apply from: '../base_module_config.gradle'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    def ext = rootProject.ext
+
+    implementation ext.coroutine.coroutineAndroid
+    implementation ext.coroutine.coroutineCore
+
+    implementation ext.retrofit.retrofit
+    implementation ext.retrofit.converterGson
+    implementation ext.arch.extensions
+
+    implementation ext.test.junit
+    implementation ext.test.mockitoCore
+    implementation ext.test.mockitoKotlin
+    implementation ext.test.mockitoInline
+    implementation ext.test.archTest
+    implementation ext.test.coroutineTest
+}

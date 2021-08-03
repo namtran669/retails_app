@@ -1,0 +1,115 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+      build_and_test_lane
+  end
+
+  desc "Submit a new Beta devDebug"
+  lane :beta_dev do
+
+    releaseNote = "Beta incoming from branch " + sh("git rev-parse --abbrev-ref HEAD") + changelog_from_git_commits(commits_count: 10, pretty: '• %s', merge_commit_filtering: 'exclude_merges') + "\n\n\"This build is automatically generated via fastlane.\""
+
+    build_android_app(
+      task: "assemble",
+      flavor: "Dev",
+      build_type: "Debug"
+    )
+
+    firebase_app_distribution(
+      app: "1:375318688700:android:18dab2215120c7c4d9f1b9",#B2C developer
+      groups: "beta-develop, wefresh-staff",
+      release_notes: releaseNote,
+      firebase_cli_token: "1//0gLAvGj5a9Y0YCgYIARAAGBASNwF-L9Irq0hjj8Igfpu-OZ9Hy5rLxPgnOYfC2NlLETPCiMEzc6PvAd-EW9X3eMh2joyIyAqEPtQ"
+    )
+  end
+
+  desc "Submit a new Beta stagingDebug"
+  lane :beta_staging do
+
+    releaseNote = "Beta incoming from branch " + sh("git rev-parse --abbrev-ref HEAD") + changelog_from_git_commits(commits_count: 10, pretty: '• %s', merge_commit_filtering: 'exclude_merges') + "\n\n\"This build is automatically generated via fastlane.\""
+
+    build_android_app(
+      task: "assemble",
+      flavor: "staging",
+      build_type: "Debug"
+    )
+
+    firebase_app_distribution(
+      app: "1:375318688700:android:43ab1affe95e4afed9f1b9",#B2C staging
+      groups: "beta-develop, wefresh-staff",
+      release_notes: releaseNote,
+      firebase_cli_token: "1//0gLAvGj5a9Y0YCgYIARAAGBASNwF-L9Irq0hjj8Igfpu-OZ9Hy5rLxPgnOYfC2NlLETPCiMEzc6PvAd-EW9X3eMh2joyIyAqEPtQ"
+    )
+  end
+
+  desc "Submit a new Beta prodRelease"
+  lane :beta_prod do
+
+    releaseNote = "Beta incoming from branch " + sh("git rev-parse --abbrev-ref HEAD") + changelog_from_git_commits(commits_count: 10, pretty: '• %s', merge_commit_filtering: 'exclude_merges') + "\n\n\"This build is automatically generated via fastlane.\""
+
+    build_android_app(
+      task: "assemble",
+      flavor: "prod",
+      build_type: "release"
+    )
+
+    firebase_app_distribution(
+      app: "1:375318688700:android:7525219bebde3b15d9f1b9",#B2B production
+      groups: "beta-release",
+      release_notes: releaseNote,
+      firebase_cli_token: "1//0gLAvGj5a9Y0YCgYIARAAGBASNwF-L9Irq0hjj8Igfpu-OZ9Hy5rLxPgnOYfC2NlLETPCiMEzc6PvAd-EW9X3eMh2joyIyAqEPtQ"
+    )
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+end
+
+def build_and_test_lane
+  clear_derived_data
+  gradle(task: "test")
+end
+
+def on_success
+  slack(
+     message: "App successfully run test",
+     success: true,
+     slack_url: "https://hooks.slack.com/services/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",#gitlab-notification
+  )
+end
+
+def on_error(exception)
+  slack(
+     message: "Error occured!",
+     success: false,
+     slack_url: "https://hooks.slack.com/services/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",#gitlab-notification
+     attachment_properties: {
+         fields: [
+             {
+                 title: "Error message",
+                 value: exception
+             }
+         ]
+     }
+  )
+end

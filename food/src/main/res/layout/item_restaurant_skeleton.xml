@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/contentCardMarginStart"
+    android:layout_marginTop="@dimen/contentCardMarginTop"
+    android:layout_marginEnd="@dimen/contentCardMarginEnd"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom"
+    android:background="@drawable/shape_white_15_radius"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/contentCardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/skeletonView"
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:background="@color/mischka"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/skeletonView2"
+            android:layout_width="243dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:background="@drawable/bg_catskillwhite_15_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/skeletonView" />
+
+        <View
+            android:id="@+id/skeletonView1"
+            android:layout_width="243dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:background="@drawable/bg_catskillwhite_15_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/skeletonView2" />
+
+        <View
+            android:id="@+id/skeletonView3"
+            android:layout_width="129dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:background="@drawable/bg_catskillwhite_15_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/skeletonView1" />
+
+        <View
+            android:id="@+id/storyReadMoreButton"
+            android:layout_width="98dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/bg_anakiwa_15_radius"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/skeletonView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

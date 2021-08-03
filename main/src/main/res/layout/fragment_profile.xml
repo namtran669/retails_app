@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/img_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/H3.Trout50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/name"
+            app:layout_constraintEnd_toEndOf="@+id/profileImageView"
+            app:layout_constraintStart_toStartOf="@+id/profileImageView"
+            app:layout_constraintTop_toBottomOf="@id/profileImageView" />
+
+        <TextView
+            android:id="@+id/viewProfileTextView"
+            style="@style/M15.DodgerBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:text="@string/view_my_profile"
+            app:layout_constraintEnd_toEndOf="@+id/nameTextView"
+            app:layout_constraintStart_toStartOf="@+id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/paymentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profileSettingViewHeight"
+            android:layout_marginTop="30dp"
+            android:background="?selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/viewProfileTextView">
+
+            <ImageView
+                android:id="@+id/paymentImageView"
+                android:layout_width="23dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:src="@drawable/ic_profile_payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/paymentTextView"
+                style="@style/H3.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="@string/my_payment"
+                app:layout_constraintBottom_toBottomOf="@+id/paymentImageView"
+                app:layout_constraintStart_toEndOf="@+id/paymentImageView"
+                app:layout_constraintTop_toTopOf="@+id/paymentImageView" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="31dp"
+                android:src="@drawable/ic_profile_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addressConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profileSettingViewHeight"
+            android:background="?selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/paymentConstraintLayout">
+
+            <ImageView
+                android:id="@+id/addressImageView"
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:src="@drawable/ic_profile_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addressTextView"
+                style="@style/H3.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="@string/my_address"
+                app:layout_constraintBottom_toBottomOf="@+id/addressImageView"
+                app:layout_constraintStart_toEndOf="@+id/addressImageView"
+                app:layout_constraintTop_toTopOf="@+id/addressImageView" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="31dp"
+                android:src="@drawable/ic_profile_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/settingConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profileSettingViewHeight"
+            android:background="?selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/addressConstraintLayout">
+
+            <ImageView
+                android:id="@+id/settingImageView"
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:src="@drawable/ic_profile_setting"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/settingTextView"
+                style="@style/H3.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="@string/settings"
+                app:layout_constraintBottom_toBottomOf="@+id/settingImageView"
+                app:layout_constraintStart_toEndOf="@+id/settingImageView"
+                app:layout_constraintTop_toTopOf="@+id/settingImageView" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="31dp"
+                android:src="@drawable/ic_profile_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/helpConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profileSettingViewHeight"
+            android:background="?selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/settingConstraintLayout">
+
+            <ImageView
+                android:id="@+id/helpImageView"
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:src="@drawable/ic_profile_help"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/helpTextView"
+                style="@style/H3.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="@string/help_center"
+                app:layout_constraintBottom_toBottomOf="@+id/helpImageView"
+                app:layout_constraintStart_toEndOf="@+id/helpImageView"
+                app:layout_constraintTop_toTopOf="@+id/helpImageView" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="31dp"
+                android:src="@drawable/ic_profile_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/versionTextView"
+            style="@style/P3.Trout50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/defaultViewMargin"
+            android:layout_marginBottom="@dimen/profileSettingViewHeight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpConstraintLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

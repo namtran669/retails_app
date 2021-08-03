@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.home" >
+
+    <application>
+        <activity
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:name="namit.retail_app.home.presentation.tab.TabActivity"/>
+
+        <activity
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:name="namit.retail_app.home.presentation.settings.SettingsActivity"/>
+    </application>
+</manifest>

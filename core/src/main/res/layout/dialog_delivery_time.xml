@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_white_top_left_right_30_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideLine1">
+
+        <ImageView
+            android:id="@+id/closeImageView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_close_white"
+            android:tint="@color/trout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/deliveryIconImageView"
+            android:layout_width="65dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/ic_delivery_truck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/deliveryIconViewSkeleton"
+            android:layout_width="65dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/bg_anakiwa_8_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timeSlotTitleTextView"
+            style="@style/B18.Trout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="91dp"
+            android:text="@string/delivery_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/timeSlotTitleViewSkeleton"
+            android:layout_width="134dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="93dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/timeSlotDetailViewSkeleton1"
+            android:layout_width="219dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeSlotTitleViewSkeleton" />
+
+        <View
+            android:id="@+id/timeSlotDetailViewSkeleton2"
+            android:layout_width="112dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeSlotDetailViewSkeleton1" />
+
+        <TextView
+            android:id="@+id/timeSlotDetailTextView"
+            style="@style/H4.Trout70"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="126dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/please_select_your_preferred"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deliveryDayRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:clipToPadding="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeSlotDetailTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deliveryTimeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            app:layout_constraintBottom_toTopOf="@id/guideLine2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deliveryDayRecyclerView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/deliveryNowLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:background="@drawable/bg_catskillwhite30_10_radius"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/guideLine2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deliveryDayRecyclerView"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/deliveryNowInfoTextView"
+                style="@style/P2.Trout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginEnd="72dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/deliveryNowImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="@string/delivery_now_off_msg" />
+
+            <ImageView
+                android:id="@+id/deliveryNowImageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_box_time_slot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryNowInfoTextView"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirmButton"
+            style="@style/MaterialTextButton.H1.WhiteDodgerBlueTropicalBlue"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:text="@string/confirm"
+            android:textAllCaps="true"
+            android:enabled="false"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLine2"
+            app:layout_constraintVertical_bias="0.4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

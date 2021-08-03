@@ -1,0 +1,57 @@
+mutation AddCreditCard($cardToken: String!, $isDefault: Boolean!) {
+    addCreditCard(payload: {card_token: $cardToken, is_default: $isDefault}) {
+        id
+        payment_method_type
+        credit_card_source {
+            id
+            brand
+            card_last_digits
+            created_at
+            omise_card_id
+            omise_customer_id
+            updated_at
+        }
+        user_id
+        is_default
+    }
+}
+
+query PaymentMethodAllow  {
+    payment_methods(pagination: {limit: 20, skip: 0}) {
+        id
+        name
+        slug
+    }
+}
+
+query GetUserPaymentMethod($limit:Int!, $skip:Int!) {
+    user_payment_methods(pagination: {limit: $limit, skip: $skip}, where: {is_default: false}) {
+        ...UserPaymentMethodElement
+    }
+}
+
+mutation DeleteUserPaymentMethod($userPaymentId: Int!) {
+    deleteUserPaymentMethod(payload: {user_payment_method_id: $userPaymentId})
+}
+
+fragment UserPaymentMethodElement on UserPaymentMethod {
+    id
+    payment_method {
+        name
+        slug
+        id
+    }
+    payment_method_type
+    credit_card_source {
+        id
+        brand
+        card_last_digits
+        created_at
+        omise_card_id
+        omise_customer_id
+        updated_at
+    }
+    true_money_source_id
+    user_id
+    is_default
+}

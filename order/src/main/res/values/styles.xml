@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabBackground">@drawable/bg_order_status_selected</item>
+        <item name="tabTextAppearance">@style/B15.Trout70</item>
+        <item name="tabSelectedTextColor">@color/dodgerBlue</item>
+    </style>
+</resources>

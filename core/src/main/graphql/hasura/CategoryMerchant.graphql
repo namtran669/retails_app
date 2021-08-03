@@ -1,0 +1,74 @@
+fragment CategoryElement on categories {
+    id
+    merchant_id
+    parent_id
+    icon
+    name_en
+    name_th
+    description_en
+    description_th
+    products_categories_aggregate(where: {product: {merchant_id: {_eq: $merchantId}}}) {
+        aggregate {
+            count
+        }
+    }
+}
+
+query fetchMerchantCategory($merchantId: String, $limit: Int, $offset: Int) {
+    categories(
+        where: {
+            merchant_id: {_eq: $merchantId },
+            parent_id: { _is_null: true},
+            name_th: {_nin: ["", "\n", "\t"]},
+            name_en: {_nin: ["", "\n", "\t"]},
+            status: {_eq: true},
+            products_categories: {product: {merchant_id: {_eq: $merchantId}}}
+        }
+    ) {
+        ...CategoryElement
+    }
+}
+
+query fetchMerchantSubCategory($merchantId: String, $parentId: Int, $limit: Int, $offset: Int) {
+    categories(
+        limit: $limit,
+        offset: $offset,
+        where: {merchant_id: {_eq: $merchantId },
+            parent_id: {_eq: $parentId },
+            name_th: {_nin: ["", "\n", "\t"]},
+            name_en: {_nin: ["", "\n", "\t"]},
+            status: {_eq: true},
+            products_categories: {product: {merchant_id: {_eq: $merchantId}}}
+        }) {
+        ...CategoryElement
+    }
+}
+
+
+fragment FeaturedProductCategory on categories {
+    id
+    merchant_id
+    parent_id
+    icon
+    name_en
+    name_th
+    description_en
+    description_th
+    products_categories(limit: 10, offset: 0) {
+        product {
+            ...ProductElement
+        }
+    }
+}
+
+query fetchFeaturedProductsCategoryRoot($merchantIdList: [String!]) {
+    categories(where: {
+        parent_id: {_is_null: true },
+        name_en: {_in: ["Featured Products", "Featured"] },
+        merchant_id: {_in: $merchantIdList},
+        status: {_eq: true},
+        products_categories: {product: {merchant_id: {_in: $merchantIdList}}}
+    }) {
+        ...FeaturedProductCategory
+    }
+}

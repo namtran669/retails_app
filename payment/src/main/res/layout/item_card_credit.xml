@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/paymentCardWidth"
+    android:layout_height="@dimen/paymentCardHeight"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/shape_white_15_radius"
+    app:cardCornerRadius="@dimen/paymentCardCornerRadius"
+    app:cardElevation="@dimen/defaultViewElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cardCurrencyPaymentTextView"
+            style="@style/P2.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="7dp"
+            android:text="THB"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardAddNewPaymentImageView"
+            app:layout_constraintTop_toBottomOf="@+id/cardLineView" />
+
+        <TextView
+            android:id="@+id/cardAmountPaymentTextView"
+            style="@style/H5.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:text="365.00"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardAddNewPaymentImageView"
+            app:layout_constraintTop_toBottomOf="@+id/cardCurrencyPaymentTextView" />
+
+        <ImageView
+            android:id="@+id/cardIconTypePaymentImageView"
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardTitlePaymentTextView"
+            style="@style/H4.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Credit"
+            app:layout_constraintEnd_toStartOf="@+id/cardPaymentChannelPaymentImageView"
+            app:layout_constraintStart_toEndOf="@+id/cardIconTypePaymentImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardSubTitlePaymentTextView"
+            style="@style/P3.Trout50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Powered by Truemoney"
+            app:layout_constraintStart_toStartOf="@+id/cardTitlePaymentTextView"
+            app:layout_constraintTop_toBottomOf="@+id/cardTitlePaymentTextView" />
+
+        <TextView
+            android:id="@+id/cardDescPaymentTextView"
+            style="@style/P3.Trout80"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="Use WePay and get automatically 10% discounts in all your orders!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cardLineView"
+            app:layout_constraintTop_toBottomOf="@+id/cardAmountPaymentTextView" />
+
+        <ImageView
+            android:id="@+id/cardPaymentChannelPaymentImageView"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/img_true_money"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/cardLineView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/trout15"
+            app:layout_constraintEnd_toEndOf="@+id/cardPaymentChannelPaymentImageView"
+            app:layout_constraintStart_toStartOf="@+id/cardTitlePaymentTextView"
+            app:layout_constraintTop_toBottomOf="@id/cardSubTitlePaymentTextView" />
+
+        <ImageView
+            android:id="@+id/cardAddNewPaymentImageView"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/cardIconTypePaymentImageView"
+            app:layout_constraintTop_toBottomOf="@+id/cardLineView"
+            app:srcCompat="@drawable/ic_add_new_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

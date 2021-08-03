@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="185dp"
+    android:layout_height="115dp"
+    android:orientation="vertical"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/defaultViewElevation"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/merchantNameImageView"
+        android:layout_width="166dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription" />
+
+</androidx.cardview.widget.CardView>

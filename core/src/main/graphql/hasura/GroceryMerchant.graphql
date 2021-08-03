@@ -1,0 +1,70 @@
+query GroceryMerchantListQuery($lat: Float, $lng: Float, $type: String!) {
+    merchants(lat: $lat, lng: $lng, type: $type) {
+        items {
+            ...MerchantElement
+        }
+    }
+}
+
+query GetMerchantByStoreId($storeId:String) {
+    merchant(where: {
+        merchant_id : {
+            _eq: $storeId
+        }
+    }) {
+        ...MerchantElement
+    }
+}
+
+fragment MerchantElement on Merchant {
+    id
+    title
+    store_id
+    store_name
+    address {
+        street
+        district
+        city
+        province
+        zipcode
+    }
+
+    logo {
+        url
+    }
+
+    store{
+        store_id
+    }
+    cover
+    description
+    map {
+        status
+        lat
+        long
+    }
+    opening_period
+}
+
+query getMerchantTimeSlot($storeId: String!, $locale: String = "en") {
+    time_slots(merchantId: $storeId, locale: $locale) {
+        can_deliver_now
+        delivery_dates{
+            ...TimeSlotFragment
+        }
+    }
+}
+
+fragment TimeSlotFragment on TimeSlots {
+    date
+    day_of_week
+    slots {
+        ...SlotDetailFragment
+    }
+}
+fragment SlotDetailFragment on SlotDetail {
+    hour
+    pickup_at
+    is_full
+    is_pick
+}

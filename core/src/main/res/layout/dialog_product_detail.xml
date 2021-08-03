@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/productContentBottomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_white_top_left_right_30_radius"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="610dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:id="@+id/titleProductCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/closeProductImageView"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="20dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:src="@drawable/ic_close_white"
+                android:tint="@color/trout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/titleProductTextView"
+                style="@style/H2.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:visibility="invisible"
+                tools:text="Fresh Banana" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/productDetailScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="95dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/productImageViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/countOfProductImageTextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="31dp"
+                    android:background="@drawable/bg_catskillwhite_10_radius"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/productImageViewPager"
+                    tools:text="1/3" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/productImageIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productImageViewPager" />
+
+                <TextView
+                    android:id="@+id/storeOfProductTextView"
+                    style="@style/R15.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productImageIndicator"
+                    tools:text="Makro Store" />
+
+                <TextView
+                    android:id="@+id/productNameTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    app:layout_constraintEnd_toStartOf="@+id/productPriceTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/storeOfProductTextView"
+                    tools:text="Fresh Banana" />
+
+                <TextView
+                    android:id="@+id/productPriceTextView"
+                    style="@style/H1.5.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="end"
+                    app:layout_constraintBottom_toTopOf="@+id/productNameTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/productNameTextView"
+                    tools:text="27.00฿" />
+
+                <LinearLayout
+                    android:id="@+id/productPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="21dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productNameTextView">
+
+                    <TextView
+                        android:id="@+id/productSizeTextView"
+                        style="@style/P2.Trout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        tools:text="Fresh Banana"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/discountPriceTextView"
+                        style="@style/M15.Trout60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:visibility="gone"
+                        tools:text="27.00฿"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/discountPercentTextView"
+                        style="@style/P3.White.Bold"
+                        android:layout_width="50dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_text_discount_percent"
+                        android:elevation="@dimen/defaultViewElevation"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        tools:text="@string/discount_percent_example"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/outStockTextView"
+                    style="@style/M15.FrenchGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_text_border_botticelli_4_radius"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/out_of_stock"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productPriceLayout"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/alcoholWarningATextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/alcohol_warning"
+                    android:textColor="@color/sunsetOrange"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/outStockTextView"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/priceNoteTextView"
+                    style="@style/P3.Trout40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/athensGray"
+                    android:gravity="center"
+                    android:padding="9dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alcoholWarningATextView"
+                    tools:text="The price is for Today - 29 Oct 2019" />
+
+                <TextView
+                    android:id="@+id/productLifeDetailTextView"
+                    style="@style/R15.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="start"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/priceNoteTextView"
+                    tools:text="This means we guarantee that the product\n delivered to you will have 7 days or more of shelf\n life before expiration date." />
+
+                <LinearLayout
+                    android:id="@+id/productProducerDetailLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productLifeDetailTextView">
+
+                    <ImageView
+                        android:id="@+id/productFlatImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/bg_circle_no_background_image"
+                        android:scaleType="centerInside"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/productProducerTextView"
+                        style="@style/L1.Trout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:visibility="gone"
+                        tools:text="Produce of India" />
+
+                </LinearLayout>
+
+                <namit.retail_app.core.presentation.widget.OptionProductView
+                    android:id="@+id/optionProductView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productProducerDetailLayout"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/relatedProductTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/athensGray"
+                    android:paddingStart="@dimen/defaultViewMargin"
+                    android:paddingTop="@dimen/defaultViewMargin"
+                    android:paddingEnd="@dimen/defaultViewMargin"
+                    android:text="@string/related_products"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/optionProductView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/relatedProductRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/athensGray"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/verticalItemSpacePadding"
+                    android:paddingEnd="@dimen/verticalItemSpacePadding"
+                    android:paddingBottom="@dimen/defaultViewMargin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/relatedProductTextView"
+                    tools:listitem="@layout/item_product" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <namit.retail_app.core.presentation.widget.OrderProductDetailView
+        android:id="@+id/productOrderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

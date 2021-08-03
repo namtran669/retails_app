@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.001213">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: git rev-parse --abbrev-ref HEAD" time="0.016929">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: changelog_from_git_commits" time="0.021384">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: assemblestagingDebug" time="10.913949">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: firebase_app_distribution" time="24.162929">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

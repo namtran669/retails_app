@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/contentCardViewWidth"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/contentCardMarginStart"
+    android:layout_marginTop="@dimen/contentCardMarginTop"
+    android:layout_marginEnd="@dimen/contentCardMarginEnd"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom"
+    android:background="@drawable/shape_white_15_radius"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/contentCardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/featuredImageHomeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/contentCardStoryImageHeight"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/featuredTitleHomeImageView"
+            style="@style/H3.Trout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/featuredImageHomeImageView"
+            tools:text="Free drink on every purchase at participated restaurant" />
+
+        <TextView
+            android:id="@+id/featuredDateTimeHomeImageView"
+            style="@style/P2.Trout50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Thai, Vietnamese, Chinese"
+            app:layout_constraintTop_toBottomOf="@id/featuredTitleHomeImageView" />
+
+        <TextView
+            android:id="@+id/featuredTagHomeImageView"
+            style="@style/P2.Trout80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="Lorem ipsum dolor sit amet, elit sed do eiusmod tempor incididunt"
+            app:layout_constraintTop_toBottomOf="@id/featuredDateTimeHomeImageView" />
+
+        <TextView
+            android:id="@+id/featuredReadMoreTextView"
+            style="@style/L1.DodgerBlue"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:background="@drawable/shape_dodgerblue20_15_radius"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/content_order"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/featuredTagHomeImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

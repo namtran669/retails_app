@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/defaultDialogTopMargin"
+        android:background="@drawable/bg_border_dialog">
+
+        <namit.retail_app.core.presentation.widget.IconWithTitleToolbar
+            android:id="@+id/iconWithTitleToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/inputPhoneNumberScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/confirmButton"
+            app:layout_constraintTop_toBottomOf="@id/iconWithTitleToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/otpPhoneImageView"
+                    android:layout_width="141dp"
+                    android:layout_height="153dp"
+                    android:layout_marginTop="52dp"
+                    android:src="@drawable/img_otp_phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/inputNumberTitleTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/input_your_truemoney_wallet"
+                    app:layout_constraintTop_toBottomOf="@id/otpPhoneImageView" />
+
+                <TextView
+                    android:id="@+id/localNumberTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="@dimen/defaultViewMargin"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/local_number"
+                    app:layout_constraintTop_toBottomOf="@id/inputNumberTitleTextView" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="@color/botticelli"
+                    app:layout_constraintTop_toBottomOf="@id/localNumberTextView" />
+
+                <EditText
+                    android:id="@+id/phoneNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="@dimen/defaultViewMargin"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/circular_medium"
+                    android:hint="@string/your_phone_number"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:inputType="phone"
+                    android:letterSpacing="0.0"
+                    android:maxLength="16"
+                    android:textCursorDrawable="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@id/line2"
+                    app:layout_constraintTop_toBottomOf="@id/line1"
+                    tools:ignore="Autofill,LabelFor"
+                    tools:layout_editor_absoluteX="24dp" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="@dimen/defaultViewMargin"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="@color/botticelli"
+                    app:layout_constraintTop_toBottomOf="@id/phoneNumberEditText" />
+
+                <TextView
+                    android:id="@+id/descTextView"
+                    style="@style/P3.Trout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/we_will_send_you_otp"
+                    app:layout_constraintTop_toBottomOf="@id/line2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/defaultScreenBottomSpace"
+                    app:layout_constraintTop_toBottomOf="@id/descTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirmButton"
+            style="@style/MaterialTextButton.H1.WhiteDodgerBlue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/defaultButtonHeight"
+            android:layout_margin="@dimen/defaultViewMargin"
+            android:enabled="false"
+            android:text="@string/confirm_account"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputPhoneNumberScrollView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

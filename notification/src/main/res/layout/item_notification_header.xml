@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerTitleTextView"
+    style="@style/M15.Trout50"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueHaze20"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="6dp"
+    android:text="Last 7 Days" />

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/homeContentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".presentation.home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/weatherBackground"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:background="@drawable/bg_gradient_viking_white"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/weatherImageView"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_home_sun"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/titleHomeTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/titleHomeTextView"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/titleHomeTextView"
+                style="@style/P6.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/good_morning"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/annoucementRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weatherImageView" />
+
+            <ImageView
+                android:id="@+id/sevenCategoryImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_store"
+                app:layout_constraintEnd_toStartOf="@id/groceryCategoryImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/annoucementRecyclerView"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/sevenCategoryTextView"
+                style="@style/P2.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/home_category_seven"
+                app:layout_constraintEnd_toEndOf="@id/sevenCategoryImageView"
+                app:layout_constraintStart_toStartOf="@id/sevenCategoryImageView"
+                app:layout_constraintTop_toBottomOf="@id/sevenCategoryImageView" />
+
+            <ImageView
+                android:id="@+id/groceryCategoryImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_grocery"
+                app:layout_constraintEnd_toStartOf="@id/cafeCategoryImageView"
+                app:layout_constraintStart_toEndOf="@id/sevenCategoryImageView"
+                app:layout_constraintTop_toTopOf="@+id/sevenCategoryImageView" />
+
+            <TextView
+                android:id="@+id/groceryCategoryTextView"
+                style="@style/P2.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/home_category_grocery"
+                app:layout_constraintEnd_toEndOf="@id/groceryCategoryImageView"
+                app:layout_constraintStart_toStartOf="@id/groceryCategoryImageView"
+                app:layout_constraintTop_toBottomOf="@id/groceryCategoryImageView" />
+
+            <ImageView
+                android:id="@+id/cafeCategoryImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_cafe"
+                app:layout_constraintEnd_toStartOf="@id/foodCategoryImageView"
+                app:layout_constraintStart_toEndOf="@id/groceryCategoryImageView"
+                app:layout_constraintTop_toTopOf="@+id/groceryCategoryImageView" />
+
+            <TextView
+                android:id="@+id/cafeCategoryTextView"
+                style="@style/P2.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/home_category_cafe"
+                app:layout_constraintEnd_toEndOf="@id/cafeCategoryImageView"
+                app:layout_constraintStart_toStartOf="@id/cafeCategoryImageView"
+                app:layout_constraintTop_toBottomOf="@id/cafeCategoryImageView" />
+
+            <ImageView
+                android:id="@+id/foodCategoryImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_food"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cafeCategoryImageView"
+                app:layout_constraintTop_toTopOf="@+id/cafeCategoryImageView" />
+
+            <TextView
+                android:id="@+id/foodCategoryTextView"
+                style="@style/P2.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/home_category_food"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/foodCategoryImageView"
+                app:layout_constraintStart_toStartOf="@id/foodCategoryImageView"
+                app:layout_constraintTop_toBottomOf="@id/foodCategoryImageView" />
+
+            <View
+                android:id="@+id/lineUnderCategoryView"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="17dp"
+                android:background="#FAFAFA"
+                app:layout_constraintTop_toBottomOf="@id/sevenCategoryTextView" />
+
+            <TextView
+                android:id="@+id/couponHeaderTextView"
+                style="@style/H2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:text="@string/collect_your_coupon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineUnderCategoryView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/couponRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/contentCardMarginTop"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/couponHorizontalPadding"
+                android:paddingEnd="@dimen/couponHorizontalPadding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponHeaderTextView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/bottomSpaceView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponRecyclerView" />
+
+            <View
+                android:id="@+id/bottomSpaceView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/defaultItemListBottomSpace"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/storyRecyclerView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <namit.retail_app.order.presentation.widget.OrderStatusFloatingView
+        android:id="@+id/orderStatusFloatingView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

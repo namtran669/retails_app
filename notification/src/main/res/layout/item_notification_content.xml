@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border_mercury_left_right_1_width"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/notificationOrderStatusTextView"
+        style="@style/H3.AzureRadiance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="Your order has been confirmed"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/notificationTitleTextView"
+        app:layout_constraintEnd_toStartOf="@+id/leftButtonLayout"
+        app:layout_constraintStart_toEndOf="@+id/notificationIconImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/notificationTitleTextView"
+        style="@style/H3.Trout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="You’ve got 56.25฿ cash back!"
+        app:layout_constraintBottom_toTopOf="@+id/notificationContentTextView"
+        app:layout_constraintEnd_toStartOf="@+id/leftButtonLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/notificationOrderStatusTextView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/notificationContentTextView"
+        style="@style/P2.Trout50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:text="Apply promo code ‘DEC25’ for 25% off. Promo valid: 24-26 Dec ‘19"
+        app:layout_constraintBottom_toTopOf="@+id/notificationTimeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/leftButtonLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/notificationTitleTextView" />
+
+    <TextView
+        android:id="@+id/notificationTimeTextView"
+        style="@style/P2.Trout50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:text="2 hours ago"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leftButtonLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/notificationContentTextView" />
+
+    <ImageView
+        android:id="@+id/notificationIconImageView"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/ic_announcement" />
+
+
+    <LinearLayout
+        android:id="@+id/leftButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/moreIconImageView"
+            android:layout_width="11dp"
+            android:layout_height="16dp"
+            android:alpha="0.3"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_forward_small"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/notificationReorderTextView"
+            style="@style/P4.DodgerBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/bg_pattensblue_5_radius"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/reorder"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/notificationNewIconView"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_oval_pomegranate"
+        app:layout_constraintEnd_toEndOf="@+id/notificationIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/notificationIconImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

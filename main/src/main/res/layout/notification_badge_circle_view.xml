@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_badge_number"
+        style="@style/B9.White"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:minWidth="16dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginStart="18dp"
+        android:background="@drawable/bg_dodgetblue_10_radius"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textColor="@android:color/white" />
+</FrameLayout>

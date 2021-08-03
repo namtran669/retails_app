@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/onboardImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_onboard_coupon"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/onboardTileTextView"
+        style="@style/B30.Trout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/defaultViewMargin"
+        android:gravity="center"
+        android:text="@string/pay_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboardImageView" />
+
+    <TextView
+        android:id="@+id/onboardSubtitleTextView"
+        style="@style/H4.Trout70"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/defaultViewMargin"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:text="@string/with_true_money_and_credit_card"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboardTileTextView"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

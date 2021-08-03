@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:clipChildren="true"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="@dimen/defaultViewElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/restaurantImageView"
+            android:layout_width="0dp"
+            android:layout_height="163dp"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/restaurantTitleTextView"
+            style="@style/H3.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantImageView"
+            tools:text="Crystal Jade" />
+
+        <TextView
+            android:id="@+id/restaurantLabelTextView"
+            style="@style/P2.Trout50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/restaurantTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/restaurantTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantTitleTextView"
+            tools:text="Thai, Vietnamese, Chinese"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/restaurantDescriptionTextView"
+            style="@style/P2.Trout80"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/restaurantTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/restaurantTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantLabelTextView"
+            tools:text="Lorem ipsum dolor sit amet, elit sed do eiusmod tempor incididunt"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveAddressButton"
+            style="@style/MaterialTextButton.H1.DodgerBlueTropicalBlue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/order"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/restaurantTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/restaurantTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantDescriptionTextView" />
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            style="@style/B12.Trout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_white_5_radius"
+            android:elevation="@dimen/defaultViewElevation"
+            android:padding="4dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.5 km"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

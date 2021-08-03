@@ -1,0 +1,137 @@
+query searchProduct ($keywords: String, $merchantId: String, $offset: Int, $limit: Int) {
+    products(
+        where: {
+            merchant_id: {
+                _eq: $merchantId
+            },
+            _or: [
+                {
+                    name_en: {
+                        _similar: $keywords
+                    }
+                },
+                {
+                    name_th: {
+                        _similar: $keywords
+                    }
+                },
+                {
+                    brand: {
+                        _similar: $keywords
+                    }
+                },
+                {
+                    description_en: {
+                        _similar: $keywords
+                    }
+                },
+                {
+                    description_th: {
+                        _similar: $keywords
+                    }
+                }
+            ],
+            status: {
+                _eq: "ACTIVE"
+            }
+        },
+        limit: $limit,
+        offset: $offset
+    ) {
+        ...ProductElement
+    }
+}
+
+query fetchMerchantProducts ($merchantId: String, $offset: Int, $limit: Int) {
+    products(where: {merchant_id: {_eq: $merchantId}, status: {_eq: "ACTIVE"}}, limit: $limit, offset: $offset) {
+        ...ProductElement
+    }
+}
+
+fragment ProductElement on products {
+    id
+    merchant_id
+    products_categories {
+        category {
+            id
+        }
+    }
+    currency
+    thumbnail_url
+    weight
+    weight_unit
+    retail_price_with_tax
+    width
+    name_en
+    name_th
+    distributor
+    country
+    updated_at
+    option_groups(where: {options: {}}) {
+        ...ProductOptionGroup
+    }
+    description_en
+    description_th
+    package
+    package_detail
+    package_unit
+    product_id
+    shelf_life
+    shelf_life_unit
+    sku
+    images
+    is_alcohol
+    discount_percentage
+    is_discount_price
+    discount_price_start_at
+    discount_price_end_at
+    discount_price_with_tax
+    quantity
+}
+
+query fetchMerchantProductByCategory($merchantId: String, $categoryId: [Int!], $productId: Int, $offset: Int, $limit: Int) {
+    products(where: {merchant_id: {_eq: $merchantId},
+        products_categories: { category_id: {_in: $categoryId } },
+        id: {_neq: $productId},
+        _not: { products_categories: { category: { parent_id: {_in: $categoryId} } }
+        status: {_eq: "ACTIVE" }}
+    },
+        limit: $limit,
+        offset: $offset,
+    ) {
+        ...ProductElement
+    }
+}
+
+fragment ProductOptionGroup on option_groups {
+    id
+    name_th
+    name_en
+    selection
+    type
+    max_limit
+    min_limit
+    options {
+        id
+        name_en
+        name_th
+        price
+        description
+        currency
+    }
+}
+
+
+query fetchMerchantFood ($merchantId: String, $limit: Int, $offset: Int) {
+    products(where:
+    {
+        merchant_id: {_eq: $merchantId },
+        status: {_eq: "ACTIVE" }
+    },
+        limit: $limit,
+        offset: $offset) {
+
+        ...ProductElement
+
+    }
+}

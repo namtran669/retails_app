@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contentCardCornerRadius">15dp</dimen>
+    <dimen name="contentCardMarginStartEnd">20dp</dimen>
+    <dimen name="contentCardMarginBetween">15dp</dimen>
+    <dimen name="contentCardMarginTopBottom">15dp</dimen>
+
+    <dimen name="productItemStartEndSpace">10dp</dimen>
+    <dimen name="productItemBetweenSpace">20dp</dimen>
+    <dimen name="productItemTopSpace">15dp</dimen>
+    <dimen name="productItemBottomSpace">30dp</dimen>
+
+    <dimen name="featureCategoryStartEndSpace">6dp</dimen>
+    <dimen name="featureCategoryBetweenSpace">6dp</dimen>
+
+    <dimen name="catalogCategoryBetweenSpace">20dp</dimen>
+    <dimen name="catalogCategoryTopSpace">15dp</dimen>
+    <dimen name="catalogCategoryBottomSpace">15dp</dimen>
+    <dimen name="catalogCategoryRecyclerViewPadding">10dp</dimen>
+
+    <dimen name="subCategoryStartEndSpace">20dp</dimen>
+    <dimen name="subCategoryBetweenSpace">6dp</dimen>
+    <dimen name="subCategoryTopSpace">10dp</dimen>
+    <dimen name="subCategoryBottomSpace">60dp</dimen>
+</resources>

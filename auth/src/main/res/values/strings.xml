@@ -1,0 +1,22 @@
+<resources>
+    <string name="trueid_client_id">2721</string>
+    <string name="trueid_client_flow">422424c8bf2ab8e3acb2bf9b925734f3</string>
+    <string name="skip">Skip</string>
+    <string name="or">or</string>
+    <string name="welcome">Welcome</string>
+    <string name="true_id_member">Log in with phone number</string>
+    <string name="with_true_id">Connect with</string>
+    <string name="enter_phone_number">Enter your phone number</string>
+    <string name="sending_sms_otp_inform">Sending you SMS</string>
+    <string name="verify_phone_number">Verify phone number</string>
+    <string name="require_enter_otp_number">Please enter the 6-digit code we sent you</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="thank_you_title">Thank You</string>
+    <string name="did_not_receive_code">Didn’t receive code?</string>
+    <string name="resend_again">Resend again</string>
+    <string name="second">second</string>
+    <string name="by_signing_up_you_agree_to_our"><![CDATA[By Signing up you agree to our]]></string>
+    <string name="terms_conditions_amp_privacy_policy"><u>Terms &amp; Conditions and Privacy Policy</u></string>
+    <string name="enter_your_otp_code">Enter your OTP code</string>
+    <string name="privacy_policy">Permissions requested</string>
+</resources>

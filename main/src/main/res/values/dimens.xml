@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paymentCardContainerViewHeight">213dp</dimen>
+    <dimen name="bottomNavigationTabHeight">78dp</dimen>
+    <dimen name="profileSettingViewHeight">80dp</dimen>
+</resources>

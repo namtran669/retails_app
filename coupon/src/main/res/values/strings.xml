@@ -1,0 +1,36 @@
+<resources>
+    <string name="you_have_x_coupon">You have %s coupons</string>
+    <string name="you_have_x_coupon_available">You have %s coupons available</string>
+    <string name="view">view</string>
+    <string name="see_details">More details</string>
+    <string name="expires">expires</string>
+    <string name="coupons">Coupons</string>
+    <string name="see_t_and_c">See T&amp;C</string>
+    <string name="collect_your_coupon">Collect your coupon now</string>
+    <string name="get">GET</string>
+    <string name="use_now">Use now</string>
+    <string name="get_x">Get 2</string>
+    <string name="buy_x">Buy 1</string>
+    <string name="get_point">All member points</string>
+    <string name="get_discount">Off</string>
+    <string name="free">Free</string>
+    <string name="delivery" translatable="false">delivery</string>
+    <string name="free_delivery">Free</string>
+    <string name="discount_percentage">% OFF</string>
+    <string name="thb_off">THB OFF</string>
+    <string name="coupon_details">Coupon Details</string>
+    <string name="coupon_condition">Coupon Condition</string>
+    <string name="promotion">Promotion</string>
+    <string name="duration">Duration</string>
+    <string name="payment">Payment</string>
+    <string name="details">Details</string>
+    <string name="all">All</string>
+    <string name="flash_deal">Flash</string>
+    <string name="until">Until</string>
+    <string name="available_coupons">Available coupons</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="please_input_your_code_to_get_a_discount">Please input your code to get a discount</string>
+    <string name="sorry_expired_code">Sorry, Expired Code</string>
+    <string name="sorry_invalid_code">Sorry, Invalid code</string>
+    <string name="redeem">Redeem</string>
+</resources>

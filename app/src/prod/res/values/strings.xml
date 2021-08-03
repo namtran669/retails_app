@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeFresh</string>
+
+    <!--Bransh.io-->
+    <string name="branchKey" translatable="false">key_live_gaF14L3bdSenPlPLE5904eeaBvhhjIgq</string>
+    <string name="branchScheme" translatable="false">wefresh</string>
+    <string name="branchTestMode" translatable="false">false</string>
+    <string name="branchAppLink" translatable="false">wefresh.app.link</string>
+    <string name="branchAppLinkAlternate" translatable="false">wefresh-alternate.app.link</string>
+</resources>

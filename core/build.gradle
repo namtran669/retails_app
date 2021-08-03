@@ -1,0 +1,94 @@
+apply from: '../base_module_config.gradle'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.apollographql.android'
+
+dependencies {
+    def ext = rootProject.ext
+
+    // Kotlin
+    api ext.kotlin
+
+    // Support library
+    api ext.support.design
+    api ext.support.cardview
+    api ext.support.supportv4
+    api ext.support.constraint
+    api ext.support.appcompatv7
+
+    // Dependency injection
+    api ext.koin.koinAndroid
+    api ext.koin.koinAndroidViewmodel
+
+    // Coroutine
+    api ext.coroutine.coroutineAndroid
+    api ext.coroutine.coroutineCore
+
+    // Android architecture component
+    api ext.arch.extensions
+
+    // Retrofit
+    api ext.gson
+    api ext.retrofit.retrofit
+    api ext.retrofit.converterGson
+    api ext.okhttpLoggingInterceptor
+
+    //Glide
+    api ext.glide.glide
+    kapt ext.glide.glideCompiler
+
+    //Rx
+    api ext.rx.permission
+    api ext.rx.android
+    api ext.rx.java
+
+    //Apollo
+    api ext.apollo.runtime
+    api ext.apollo.android
+    api ext.apollo.coroutines
+
+    //Firebase
+    api ext.firebase.core
+    api ext.firebase.analytic
+    api ext.firebase.crashlytics
+    api ext.firebase.fcm
+
+    //Google Play Service
+    api ext.googlePlayService.ads
+
+    //Skeleton
+    api ext.skeleton.main
+    api ext.skeleton.shimmerLayout
+
+    //Ticket view
+    api ext.ticketView
+
+    //Phone number lib
+    api ext.libPhonenumber
+
+    //Section RecyclerView
+    api ext.sectionRecyclerview
+
+    //Flexbox layout
+    api ext.flexboxLayout
+
+    //Swipe layout
+    api ext.swipeableLayout
+
+    //Switch button
+    api ext.switchButton
+
+    //Auth TrueID
+    api ext.trueID
+
+    api ext.viewPagerIndicator
+
+    api ext.lottie
+
+    api ext.branch
+}
+
+apollo {
+    generateKotlinModels = false // or false
+}
+
+android { sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/raw'] } } }

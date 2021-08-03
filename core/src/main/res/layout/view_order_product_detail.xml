@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/reduceOneItemImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:alpha="0.2"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/adjust"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sizeOrderProductTextView"
+            style="@style/B1.Trout"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/reduceOneItemImageView"
+            app:layout_constraintStart_toEndOf="@+id/reduceOneItemImageView"
+            app:layout_constraintTop_toTopOf="@+id/reduceOneItemImageView"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/addOneItemImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:background="?selectableItemBackground"
+            android:contentDescription="@string/adjust"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="@+id/sizeOrderProductTextView"
+            app:layout_constraintStart_toEndOf="@+id/sizeOrderProductTextView"
+            app:layout_constraintTop_toTopOf="@+id/sizeOrderProductTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCartButton"
+            style="@style/MaterialTextButton.B12.WhiteDodgerBlue"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="true"
+            app:cornerRadius="9dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reduceOneItemImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addOneItemImageView"
+            app:layout_constraintTop_toTopOf="@+id/reduceOneItemImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

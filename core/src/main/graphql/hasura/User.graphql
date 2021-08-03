@@ -1,0 +1,46 @@
+mutation AuthenticationLoginOtp($phoneNumber: String!){
+    loginOtp (
+        payload: {
+            phoneNumber: $phoneNumber
+        }
+    ),
+    {
+        code,
+        description
+    }
+}
+mutation AuthenticationVerifyOTP($phoneNumber: String!, $otp: String!, $secureId: String!) {
+    verifyOtp(
+        payload: {
+            phoneNumber: $phoneNumber,
+            otp: $otp,
+            secure_id: $secureId
+        }
+    ),
+    {
+        access_token,
+        refresh_token
+    }
+}
+
+mutation AuthenticationUpdateNotificationToken($uuid:String,$status:String){
+    updateNotificationToken(
+        payload: {
+             uuid: $uuid,
+             status: $status
+        }
+    ), {
+        user_id
+    }
+}
+
+query AuthenticationGetUserProfile {
+    getProfile {
+        id,
+        phone_number,
+        username,
+        phone_verified,
+        created_at,
+        updated_at
+    }
+}

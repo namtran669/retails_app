@@ -1,0 +1,10 @@
+buildscript {
+    def mVersionMajor = 2
+    def mVersionMinor = 0
+    def mVersionBuild = 4
+    def mVersionName = "${mVersionMajor}.${mVersionMinor}.${mVersionBuild}"
+    def mVersionCode = 59
+
+    ext.version_code = mVersionCode
+    ext.version_name = mVersionName
+}

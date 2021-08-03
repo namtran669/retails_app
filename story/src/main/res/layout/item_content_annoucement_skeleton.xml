@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/contentCardViewWidth"
+    android:layout_height="188dp"
+    android:layout_marginStart="@dimen/contentCardMarginStart"
+    android:layout_marginTop="@dimen/contentCardMarginTop"
+    android:layout_marginEnd="@dimen/contentCardMarginEnd"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom"
+    android:background="@drawable/shape_white_15_radius"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/contentCardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="169dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="47dp"
+            android:background="@drawable/bg_catskillwhite_10_radius"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="169dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/bg_catskillwhite_10_radius"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="129dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/bg_catskillwhite_10_radius"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="98dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/bg_anakiwa_15_radius"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

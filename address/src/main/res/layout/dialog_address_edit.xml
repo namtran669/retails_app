@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editAddressWrapperLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_white_top_left_right_30_radius"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideLine">
+
+        <ImageView
+            android:id="@+id/iconCloseImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView3"
+            app:srcCompat="@drawable/ic_close_black"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/B30.Trout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/edit_your_address"
+            app:layout_constraintStart_toEndOf="@+id/iconCloseImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/inputContentScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/saveAddressButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconCloseImageView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inputContentContainerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/homeOptionTextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/ic_home_grey"
+                    android:drawablePadding="10dp"
+                    android:focusable="true"
+                    android:padding="5dp"
+                    android:text="@string/home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/otherOptionTextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/ic_others_location_grey"
+                    android:drawablePadding="10dp"
+                    android:focusable="true"
+                    android:padding="5dp"
+                    android:text="@string/others"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/homeOptionTextView" />
+
+                <TextView
+                    android:id="@+id/workOptionTextView"
+                    style="@style/P2.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/ic_work_location_grey"
+                    android:drawablePadding="10dp"
+                    android:focusable="true"
+                    android:padding="5dp"
+                    android:text="@string/work"
+                    app:layout_constraintEnd_toStartOf="@+id/otherOptionTextView"
+                    app:layout_constraintStart_toEndOf="@+id/homeOptionTextView"
+                    app:layout_constraintTop_toTopOf="@+id/homeOptionTextView" />
+
+                <TextView
+                    android:id="@+id/addressNameTextView"
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="26dp"
+                    android:text="@string/address_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/workOptionTextView" />
+
+                <EditText
+                    android:id="@+id/addressNameEditText"
+                    style="@style/MaterialEditText.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_whisper_10_radius"
+                    android:hint="@string/eg_friend_s_house_dorm"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressNameTextView"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/addressTitleTextView"
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/address"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressNameEditText" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addressInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_whisper_10_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressTitleTextView">
+
+                    <ImageView
+                        android:id="@+id/iconMapImageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_map"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/addressEditText"
+                        style="@style/P2.Trout50"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/whisper"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:hint="@string/eg_99_9_sukhumvit_road_central_world"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iconMapImageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="Autofill" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/addressDetailsTitleTextView"
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/address_details"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressInputLayout" />
+
+                <EditText
+                    android:id="@+id/addressDetailsEditText"
+                    style="@style/MaterialEditText.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_whisper_10_radius"
+                    android:hint="@string/e_g_floor_unit_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressDetailsTitleTextView"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/phoneNumberTitleTextView"
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/phone_number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressDetailsEditText" />
+
+                <EditText
+                    android:id="@+id/phoneNumberEditText"
+                    style="@style/MaterialEditText.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_whisper_10_radius"
+                    android:hint="@string/eg_081_123_4567"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneNumberTitleTextView"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/noteTitleTextView"
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/note_to_driver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
+                <EditText
+                    android:id="@+id/noteDriverEditText"
+                    style="@style/MaterialEditText.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_whisper_10_radius"
+                    android:gravity="top|left"
+                    android:hint="@string/e_g_meet_me_in_front_of_the_building"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="5"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/noteTitleTextView"
+                    tools:ignore="Autofill,RtlHardcoded" />
+
+                <TextView
+                    style="@style/M15.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="@string/set_as_default"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/noteDriverEditText" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/setDefaultSwitchButton"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="20dp"
+                    app:kswBackColor="@color/tropicalBlue"
+                    app:kswThumbColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/noteDriverEditText"
+                    tools:ignore="RtlHardcoded"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveAddressButton"
+            style="@style/MaterialTextButton.H1.DodgerBlueTropicalBlue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/save_address"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputContentScrollView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

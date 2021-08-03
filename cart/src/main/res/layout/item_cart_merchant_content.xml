@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.sulek.ssml.SimpleSwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cartItemSwipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dynamicMenuWidth="false"
+    android:layout_marginBottom="25dp"
+    app:menuSide="Right">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundContainer"
+        android:layout_width="68dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_shape_sunsetorange_10_top_left_bottom_left_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/binImageView"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_bin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/foregroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_border_catskillwhite_2_width_10_radius"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@tools:sample/avatars[1]" />
+
+        <TextView
+            android:id="@+id/discountPercentTextView"
+            style="@style/B12.White"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_emerald_bottom_left_right_10_radius"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/productImageView"
+            app:layout_constraintEnd_toEndOf="@+id/productImageView"
+            app:layout_constraintStart_toStartOf="@+id/productImageView"
+            tools:text="20%"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/productNameTextView"
+            style="@style/M18.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/discountPriceTextView"
+            app:layout_constraintStart_toEndOf="@+id/productImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Banana"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/detailsProductTextView"
+            style="@style/M18.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/productNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/productNameTextView"
+            tools:text="@string/size_product_example"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/discountPriceTextView"
+            style="@style/B18.Trout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/actual_price_product"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/actualPriceTextView"
+            style="@style/P2.Trout50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/priceDetailTextView"
+            app:layout_constraintStart_toStartOf="@+id/productNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsProductTextView"
+            tools:text="@string/actual_price_product"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/priceDetailTextView"
+            style="@style/P2.Trout50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/adjustAmountLayout"
+            app:layout_constraintStart_toEndOf="@+id/actualPriceTextView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsProductTextView"
+            tools:text="24.00฿/Pack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adjustAmountLayout"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/discountPriceTextView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/priceDetailTextView"
+            app:layout_constraintTop_toTopOf="@+id/priceDetailTextView">
+
+            <ImageView
+                android:id="@+id/reduceOneItemImageView"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:background="?selectableItemBackground"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sizeOrderProductTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/sizeOrderProductTextView"
+                style="@style/P2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="?selectableItemBackground"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/addOneItemImageView"
+                app:layout_constraintStart_toEndOf="@id/reduceOneItemImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+            <ImageView
+                android:id="@+id/addOneItemImageView"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sizeOrderProductTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</io.sulek.ssml.SimpleSwipeMenuLayout>

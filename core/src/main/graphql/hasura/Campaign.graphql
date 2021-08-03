@@ -1,0 +1,122 @@
+query getCampaignListWithCartId($cartId: Int) {
+    redeemed_cart(where: {cart_id: {_eq: $cartId}}) {
+        campaign {
+            ...CampaignElement
+        }
+    }
+}
+
+query getAllCampaignList ($offset: Int, $limit: Int) {
+    campaigns(
+        pagination: {
+            limit: $limit,
+            skip: $offset
+        },
+        where: {
+            status: {
+                _in: [ACTIVE]
+            },
+            campaign_format: {
+                _in: [VOUCHER]
+            }
+        })
+    {
+        edges {
+            ...CampaignElement
+        }
+    }
+}
+
+query getCampaignListByVertical ($offset: Int, $limit: Int, $vertical: [String!]) {
+    campaigns(
+        pagination: {
+            limit: $limit,
+            skip: $offset
+        },
+        where: {
+            status: {
+                _in: [ACTIVE]
+            },
+            campaign_format: {
+                _in: [VOUCHER]
+            },
+            vertical: {
+                _in: $vertical
+            }
+        })
+    {
+        edges {
+            ...CampaignElement
+        }
+    }
+}
+
+query getCampaignListByMerchant ($offset: Int, $limit: Int, $merchantId: [String!]) {
+    campaigns(
+        pagination: {
+            limit: $limit,
+            skip: $offset
+        },
+        where: {
+            status: {
+                _in: [ACTIVE]
+            },
+            campaign_format: {
+                _in: [VOUCHER]
+            },
+            merchant_id: {
+                _in: $merchantId
+            }
+        })
+    {
+        edges {
+            ...CampaignElement
+        }
+    }
+}
+
+fragment CampaignElement on Campaign {
+    code
+    name
+    description
+    campaign_type
+    flash_deal
+    is_recurring
+    end_date
+    end_time
+    scope {
+        ...CampaignScope
+    }
+    customer_gets {
+        value
+        from_value
+    }
+}
+
+fragment CampaignScope on ScopeInfo {
+    first_name
+    last_name
+    logo {
+        url
+    }
+    type {
+        iconUrl
+        type
+        title {
+            th
+            en
+        }
+    }
+    title
+    scope_type
+    url
+}
+
+query getAllVertical {
+    verticals {
+        id
+        name_en
+        name_th
+        slug
+    }
+}

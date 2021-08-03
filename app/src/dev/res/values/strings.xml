@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppRetail-Dev</string>
+
+    <!--Bransh.io-->
+    <string name="branchKey" translatable="false">key_test_naq90L4jnLniRoTNDW84QmjlvqfooNof</string>
+    <string name="branchScheme" translatable="false">appretailtest</string>
+    <string name="branchTestMode" translatable="false">true</string>
+    <string name="branchAppLink" translatable="false">appretail.test-app.link</string>
+    <string name="branchAppLinkAlternate" translatable="false">appretail-alternate.test-app.link</string>
+</resources>

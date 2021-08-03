@@ -1,0 +1,7 @@
+<resources>
+    <string name="content_read_more">Read more</string>
+    <string name="more_details">More details</string>
+    <string name="content_order">Order</string>
+    <string name="close">CLOSE</string>
+    <string name="order_now">Order Now</string>
+</resources>

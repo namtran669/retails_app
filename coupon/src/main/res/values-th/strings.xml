@@ -1,0 +1,36 @@
+<resources>
+    <string name="you_have_x_coupon">คุณมี %s คูปอง</string>
+    <string name="you_have_x_coupon_available">คุณมีคูปองที่ใช้ได้ %s ใบ</string>
+    <string name="view">ดู</string>
+    <string name="see_details">ดูรายละเอียด</string>
+    <string name="expires">หมดอายุ</string>
+    <string name="coupons">คูปอง</string>
+    <string name="see_t_and_c">เงื่ื่อนไข</string>
+    <string name="collect_your_coupon">เก็บคูปอง</string>
+    <string name="get">รับส่วนลด</string>
+    <string name="use_now">ใช้คูปอง</string>
+    <string name="get_x">ได้ 2</string>
+    <string name="buy_x">ซื้อ 1</string>
+    <string name="get_point">คะแนน ALL member</string>
+    <string name="get_discount">ส่วนลด</string>
+    <string name="free">ฟรี</string>
+    <string name="delivery" translatable="false">ส่ง</string>
+    <string name="free_delivery">ส่งฟรี!</string>
+    <string name="discount_percentage">% </string>
+    <string name="thb_off">บาท</string>
+    <string name="coupon_details">รายละเอียดคูปอง</string>
+    <string name="coupon_condition">เงื่อนไขคูปอง</string>
+    <string name="promotion">โปรโมชั่น</string>
+    <string name="duration">ระยะเวลา</string>
+    <string name="payment">ช่องทางการชำระเงิน</string>
+    <string name="details">รายละเอียด</string>
+    <string name="all">ทั้งหมด</string>
+    <string name="flash_deal">Flash</string>
+    <string name="until">จนถึง</string>
+    <string name="available_coupons">คูปองที่ใช้ได้</string>
+    <string name="promo_code">โค้ดส่วนลด</string>
+    <string name="please_input_your_code_to_get_a_discount">กรุณากรอกโค้ดส่วนลดเพื่อรับโปรโมชั่น</string>
+    <string name="sorry_expired_code">ขออภัย โค้ดส่วนลดหมดอายุแล้ว</string>
+    <string name="sorry_invalid_code">ขออภัย ไม่พบโค้ดส่วนลดในระบบ</string>
+    <string name="redeem">ใช้โค้ดส่วนลด</string>
+</resources>

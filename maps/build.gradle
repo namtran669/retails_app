@@ -1,0 +1,18 @@
+apply from: '../base_module_config.gradle'
+
+android {
+    defaultConfig {
+        buildConfigField 'String', 'MAPS_URL', '"https://maps.googleapis.com/"'
+        buildConfigField 'String', 'GOOGLE_CLOUD_API_KEY', '" AIzaSyA1suobzXQdtbq1T6tgUaUo87eE7i_FUEo"'
+        buildConfigField 'String', 'GOOGLE_CLOUD_SEARCH_PLACE_API_KEY', '" AIzaSyA1suobzXQdtbq1T6tgUaUo87eE7i_FUEo"'
+    }
+}
+
+dependencies {
+    def ext = rootProject.ext
+    implementation project(":core")
+
+    api ext.rx.location
+    api ext.googlePlayService.maps
+    api ext.googlePlayService.location
+}

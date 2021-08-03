@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintBottom_toBottomOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleTextView"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/B30.Trout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:layout_marginTop="@dimen/defaultViewMargin"
+        android:text="@string/coupon_details"
+        app:layout_constraintStart_toEndOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/couponDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toTopOf="@id/useNowButton"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/couponContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/couponConditionTextView"
+                style="@style/H2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="@dimen/defaultViewMargin"
+                android:layout_marginTop="10dp"
+                android:text="@string/coupon_condition"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponContainer" />
+
+            <TextView
+                android:id="@+id/promotionTitleTextView"
+                style="@style/P6.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/promotion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponConditionTextView" />
+
+            <TextView
+                android:id="@+id/promotionTextView"
+                style="@style/P2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/couponConditionTextView"
+                app:layout_constraintStart_toStartOf="@+id/promotionTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/promotionTitleTextView" />
+
+            <TextView
+                android:id="@+id/durationTitleTextView"
+                style="@style/P6.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/duration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/promotionTextView" />
+
+            <TextView
+                android:id="@+id/durationTextView"
+                style="@style/P2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/couponConditionTextView"
+                app:layout_constraintStart_toStartOf="@+id/promotionTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/durationTitleTextView" />
+
+            <TextView
+                android:id="@+id/paymentTitleTextView"
+                style="@style/P6.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/payment"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/durationTextView" />
+
+            <TextView
+                android:id="@+id/paymentTextView"
+                style="@style/P2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/couponConditionTextView"
+                app:layout_constraintStart_toStartOf="@+id/promotionTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/paymentTitleTextView" />
+
+            <TextView
+                android:id="@+id/detailsTitleTextView"
+                style="@style/P6.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentTextView" />
+
+            <TextView
+                android:id="@+id/detailsTextView"
+                style="@style/P2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/couponConditionTextView"
+                app:layout_constraintStart_toStartOf="@+id/promotionTitleTextView"
+                app:layout_constraintTop_toBottomOf="@id/detailsTitleTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/useNowButton"
+        style="@style/MaterialTextButton.H1.WhiteDodgerBlue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/defaultButtonHeight"
+        android:layout_margin="@dimen/defaultViewMargin"
+        android:text="@string/use_now"
+        android:textAllCaps="true"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/couponDetailScrollView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

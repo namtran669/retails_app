@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/couponConstraintLayout"
+        android:layout_width="315dp"
+        android:layout_height="126dp"
+        android:background="@drawable/img_coupon_convenience_bg"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponIconHorizontalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponLeftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponIconRightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponIconLeftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponBottomHorizontalGuideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.63" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponBottomHorizontalGuideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponRightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponIconTopGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponIconBottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.54" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponTopDesc2Guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/couponTopValueGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <ImageView
+            android:id="@+id/couponIconImageView"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_coupon_convenience"
+            app:layout_constraintBottom_toTopOf="@id/couponIconBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/couponIconRightGuideline"
+            app:layout_constraintStart_toStartOf="@id/couponIconLeftGuideline"
+            app:layout_constraintTop_toTopOf="@id/couponIconTopGuideline" />
+
+        <ImageView
+            android:id="@+id/couponMerchantIconImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/couponIconBottomGuideline"
+            app:layout_constraintEnd_toEndOf="@id/couponIconRightGuideline"
+            app:layout_constraintStart_toStartOf="@id/couponIconLeftGuideline"
+            app:layout_constraintTop_toTopOf="@id/couponIconTopGuideline" />
+
+        <ImageView
+            android:id="@+id/lineImageView"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_coupon_line_white"
+            app:layout_constraintBottom_toTopOf="@id/couponBottomHorizontalGuideline1"
+            app:layout_constraintStart_toEndOf="@id/couponIconRightGuideline"
+            app:layout_constraintTop_toTopOf="@id/couponTopGuideline" />
+
+        <TextView
+            android:id="@+id/couponTAndCTextView"
+            style="@style/L2.Coral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/see_t_and_c"
+            app:layout_constraintBottom_toTopOf="@id/couponBottomHorizontalGuideline2"
+            app:layout_constraintStart_toStartOf="@id/couponLeftGuideline"
+            app:layout_constraintTop_toTopOf="@id/couponBottomHorizontalGuideline1" />
+
+        <TextView
+            android:id="@+id/couponDesc1TextView"
+            style="@style/C2.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:includeFontPadding="false"
+            android:text="@string/buy_x"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@id/lineImageView"
+            app:layout_constraintTop_toTopOf="@id/couponIconTopGuideline" />
+
+        <TextView
+            android:id="@+id/couponDesc2TextView"
+            style="@style/C2.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:includeFontPadding="false"
+            android:text="@string/get_x"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@id/lineImageView"
+            app:layout_constraintTop_toTopOf="@id/couponTopDesc2Guideline" />
+
+        <TextView
+            android:id="@+id/couponValueTextView"
+            style="@style/C5.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:includeFontPadding="false"
+            android:text="@string/free"
+            app:layout_constraintBottom_toTopOf="@id/couponIconBottomGuideline"
+            app:layout_constraintStart_toEndOf="@id/lineImageView"
+            app:layout_constraintTop_toBottomOf="@id/couponTopValueGuideline" />
+
+        <ImageView
+            android:id="@+id/countDownImageView"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_coupon_countdown"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/couponTAndCTextView"
+            app:layout_constraintEnd_toStartOf="@id/countDownTextView"
+            app:layout_constraintTop_toTopOf="@id/couponTAndCTextView" />
+
+        <TextView
+            android:id="@+id/countDownTextView"
+            style="@style/B9.Coral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="10:00:00"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/countDownImageView"
+            app:layout_constraintEnd_toStartOf="@id/collectNowButton"
+            app:layout_constraintTop_toTopOf="@id/countDownImageView" />
+
+        <ImageView
+            android:id="@+id/expireDateImageView"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_coupon_expire_date"
+            app:layout_constraintBottom_toBottomOf="@id/couponTAndCTextView"
+            app:layout_constraintEnd_toStartOf="@id/expireDateTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/couponTAndCTextView" />
+
+        <TextView
+            android:id="@+id/expireDateTitleTextView"
+            style="@style/C4.DodgerBlue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/expires"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@id/expireDateTextView"
+            app:layout_constraintEnd_toEndOf="@id/expireDateTextView"
+            app:layout_constraintStart_toStartOf="@id/expireDateTextView"
+            app:layout_constraintTop_toTopOf="@id/expireDateImageView" />
+
+        <TextView
+            android:id="@+id/expireDateTextView"
+            style="@style/C3.DodgerBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@id/expireDateImageView"
+            app:layout_constraintEnd_toStartOf="@id/collectNowButton"
+            app:layout_constraintTop_toBottomOf="@id/expireDateTitleTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/collectNowButton"
+            style="@style/MaterialTextButton.N1.DodgerBlueTropicalBlue"
+            android:layout_width="83dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="true"
+            android:text="@string/use_now"
+            app:layout_constraintBottom_toTopOf="@id/couponBottomHorizontalGuideline2"
+            app:layout_constraintEnd_toStartOf="@id/couponRightGuideline"
+            app:layout_constraintTop_toTopOf="@id/couponBottomHorizontalGuideline1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ranOutImageView"
+        android:layout_width="103dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        android:src="@drawable/img_coupon_ranout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/couponConstraintLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

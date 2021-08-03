@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_cart_title">ตะกร้าของคุณไม่มีสินค้า</string>
+    <string name="empty_cart_description">กรุณาเลือกซื้อสินค้า และเพิ่มเข้าในตะกร้า</string>
+    <string name="cart_screen_title">ตะกร้าของฉัน</string>
+    <string name="summary">สรุปออเดอร์</string>
+    <string name="cart_discount">ส่วนลด</string>
+    <string name="delivery_fee">ค่าบริการจัดส่ง</string>
+    <string name="add_items">เพิ่มสินค้า</string>
+    <string name="change">เปลี่ยน</string>
+    <string name="delivers_to">Delivers To</string>
+    <string name="orders">รายการสินค้า</string>
+    <string name="payment_method">วิธีการชำระเงิน</string>
+    <string name="select_payment_method">เลือกวิธีการชำระเงิน</string>
+    <string name="subtotal">รวมราคาสินค้า</string>
+    <string name="all_delivery_fees">รวมค่าบริการจัดส่งทั้งหมด</string>
+    <string name="promo_code">รหัสส่วนลด</string>
+    <string name="enter_here">ใส่รหัสส่วนลดของคุณ</string>
+    <string name="view">ดู</string>
+    <string name="total">รวมทั้งหมด</string>
+    <string name="incl_vat">(รวมภาษี)</string>
+    <string name="proceed">Proceed</string>
+    <string name="place_your_order">สั่งซื้อสินค้า</string>
+    <string name="when">เวลา</string>
+    <string name="default_price_value">฿0</string>
+    <string name="where">สถานที่</string>
+    <string name="delivery_information">รายละเอียดที่จัดส่ง</string>
+    <string name="are_you_sure_you_want_to_remove_this_product">คุณต้องการลบสินค้าใช่หรือไม่</string>
+    <string name="this_item_will_be_permanently_removed_from_your_cart">สินค้าจะหายไปจากตะกร้าของคุณ</string>
+    <string name="create_order_error_title">ขออภัย ทำรายการไม่สำเร็จ</string>
+    <string name="create_order_error_miss_address">เราไม่สามารถดำเนินการได้ เนื่องจากคุณยังไม่ระบุสถานที่จัดส่ง กรุณาตรวจสอบอีกครั้ง</string>
+    <string name="create_order_error_miss_time_slot">เราไม่สามารถดำเนินการได้ เนื่องจากช่วงเวลาจัดส่งที่คุณเลือกเต็มแล้ว กรุณาเลือกใหม่อีกครั้ง</string>
+    <string name="create_order_error_miss_payment">เราไม่สามารถดำเนินการได้ เนื่องจากคุณยังไม่ระบุช่องทางการชำระเงิน กรุณาตรวจสอบอีกครั้ง</string>
+    <string name="create_order_error_miss_cart">เราไม่สามารถดำเนินการได้ เนื่องจากคุณยังไม่ระบุร้านค้าที่จะสั่งซื้อ กรุณาตรวจสอบอีกครั้ง</string>
+    <string name="create_order_error_cart_empty">เราไม่สามารถดำเนินการได้ เนื่องจากคุณไม่มีสินค้าในตะกร้า กรุณาเลือกซื้อสินค้า และเพิ่มเข้าในตะกร้า </string>
+    <string name="select_new_address">เลือกสถานที่จัดส่ง</string>
+    <string name="select_new_time">เลือกเวลาจัดส่งใหม่</string>
+    <string name="select_new_payment">เลือกวิธีการชำระเงิน</string>
+</resources>

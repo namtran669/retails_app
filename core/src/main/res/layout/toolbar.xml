@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:elevation="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:layout_marginStart="20dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_black"
+                app:layout_constraintBottom_toBottomOf="@id/titleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/titleTextView"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/backImageView"
+                app:layout_constraintStart_toEndOf="@id/backImageView"
+                app:layout_constraintTop_toTopOf="@id/backImageView"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                style="@style/B30.Trout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@id/iconImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Grocery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

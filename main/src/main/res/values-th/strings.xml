@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">บ้าน</string>
+    <string name="home_category_seven">7/11</string>
+    <string name="home_category_grocery">ซุปเปอร์มาร์เก็ต</string>
+    <string name="home_category_cafe">คาเฟ่</string>
+    <string name="home_category_food">ร้านอาหาร</string>
+    <string name="tab_home_bottom_menu"><b>หนักแรก</b></string>
+    <string name="tab_inbox_bottom_menu"><b>ข้อความ</b></string>
+    <string name="tab_coupon_bottom_menu"><b>คูปอง</b></string>
+    <string name="tab_orders_bottom_menu"><b>ออเดอร์</b></string>
+    <string name="tab_profile_bottom_menu"><b>โปรไฟล์</b></string>
+
+    <string name="version_app">เวอร์ชั่น</string>
+    <string name="name">ชื่อ</string>
+    <string name="view_my_profile">ดูโปรไฟล์ของฉัน</string>
+    <string name="my_payment">วิธีการชำระเงินของฉัน</string>
+    <string name="my_address">ที่อยู่ของฉัน</string>
+    <string name="settings">ตั้งค่า</string>
+    <string name="help_center">ศูนย์ช่วยเหลือ</string>
+    <string name="my_profile">โปรไฟล์ของฉัน</string>
+    <string name="language">ภาษา</string>
+    <string name="notification">การแจ้งเตือน</string>
+    <string name="save">บันทึก</string>
+    <string name="thai">ไทย</string>
+    <string name="english">English</string>
+    <string name="email">อีเมล</string>
+    <string name="logout">ออกจากระบบ</string>
+    <string name="edit">แก้ไข</string>
+    <string name="delete_account">ลบบัญชี</string>
+    <string name="good_morning">สวัสดีตอนเช้า</string>
+    <string name="good_afternoon">สวัสดีตอนบ่าย</string>
+    <string name="good_evening">สวัสดีตอนเย็น</string>
+</resources>

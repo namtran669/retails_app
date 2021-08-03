@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:elevation="@dimen/defaultViewElevation"
+    android:translationZ="4dp"
+    android:layout_margin="@dimen/defaultViewMargin"
+    android:background="@drawable/bg_shape_white_15_radius"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_search_black"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/searchHintTextView"
+        style="@style/H4.Trout50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:background="@android:color/transparent"
+        android:textColorHint="@color/trout40"
+        tools:ignore="Autofill,TextFields"
+        tools:text="@string/search_hint_grocery" />
+</LinearLayout>

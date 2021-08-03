@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?android:selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/foodImageWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/foodImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/foodTitleTextView"
+        style="@style/M18.Trout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/priceTextView"
+        app:layout_constraintStart_toEndOf="@+id/foodImageWrapper"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Pad Thai With Shrimps" />
+
+    <TextView
+        android:id="@+id/foodDescriptionTextView"
+        style="@style/P2.Trout50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="@+id/foodTitleTextView"
+        app:layout_constraintStart_toStartOf="@+id/foodTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/foodTitleTextView"
+        tools:text="Lorem ipsum dolor sit, consectetur adipis" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        style="@style/B18.Trout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="300฿" />
+</androidx.constraintlayout.widget.ConstraintLayout>

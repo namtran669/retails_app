@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.cart">
+
+    <application>
+        <activity
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:name="namit.retail_app.cart.presentation.main.CartActivity" />
+    </application>
+</manifest>
+

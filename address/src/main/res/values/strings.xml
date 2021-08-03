@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="warning_broken_location">Aw! Sorry, it looks like we don’t deliver to your area yet. We hope we’ll be ready soon!</string>
+    <string name="help_center">HELP CENTER</string>
+    <string name="message_broken_location">We are expanding the service area quickly. Check out our delivery area in the HELP CENTER</string>
+
+    <string name="app_name">address</string>
+    <string name="current_location">Current Location</string>
+    <string name="others">Others</string>
+    <string name="work">Work</string>
+    <string name="address">Address</string>
+    <string name="address_details">Address details</string>
+    <string name="e_g_floor_unit_number">e.g. Floor, unit number</string>
+    <string name="phone_number">Phone number</string>
+    <string name="note_to_driver">Note to driver</string>
+    <string name="e_g_meet_me_in_front_of_the_building">e.g. Meet me in front of the building</string>
+    <string name="edit_your_address">Edit Your Address</string>
+    <string name="save_address">Save Address</string>
+    <string name="true_digital_101">True digital 101</string>
+    <string name="e_g_0811234567">eg. 081-123-4567</string>
+    <string name="my_address">My Address</string>
+    <string name="favourites">Favourites</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="set_location">Set Location</string>
+    <string name="selected_location">Selected Location</string>
+    <string name="add_work">Work</string>
+    <string name="are_you_sure_you_want_to_delete_this_address">Are you sure you want to delete this address?</string>
+    <string name="this_address_will_be_permanently_deleted_from_your_saved_address_list">This address will be permanently deleted from your saved address list.</string>
+    <string name="address_Label">Address Label</string>
+    <string name="home">Home</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="txt_default">Default</string>
+    <string name="no_has_address">You have not added any address yet.&#160;</string>
+    <string name="add_now"><u>Add now</u></string>
+    <string name="address_label">Address Label</string>
+    <string name="eg_friend_s_house_dorm">eg. Friend\'s House, Dorm</string>
+    <string name="eg_99_9_sukhumvit_road_central_world">eg. 99/9 Sukhumvit Road, Central World</string>
+    <string name="eg_081_123_4567">eg. 081-123-4567</string>
+    <string name="input_address_label_missing">The address label is require field.</string>
+    <string name="input_address_phone_invalid">The address phone number is empty or invalid.</string>
+</resources>

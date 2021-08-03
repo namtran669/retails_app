@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/headerBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:background="@drawable/bg_gradient_catskillwhite_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <namit.retail_app.core.presentation.widget.DeliveryToolbar
+        android:id="@+id/deliveryToolbarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowAddress="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:toolbarBackground="@android:color/transparent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/merchantVerticalNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryToolbarView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pinLocationImageView"
+                android:layout_width="9dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_location_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/deliveryTitleTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/deliveryTitleTextView"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/deliveryTitleTextView"
+                style="@style/M15.DodgerBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/delivery_title_toolbar"
+                app:layout_constraintStart_toEndOf="@+id/pinLocationImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addressGroceryTextView"
+                style="@style/M15.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/deliveryTitleTextView"
+                app:layout_constraintTop_toTopOf="@+id/deliveryTitleTextView"
+                tools:text="552fsdfds4 Lyla Parkways Apt…" />
+
+            <View
+                android:id="@+id/addressBarClickView"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                app:layout_constraintEnd_toEndOf="@+id/addressGroceryTextView"
+                app:layout_constraintStart_toStartOf="@+id/pinLocationImageView"
+                app:layout_constraintTop_toTopOf="@+id/deliveryTitleTextView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/merchantNameRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addressBarClickView"
+                tools:listitem="@layout/item_merchant" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="9dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/merchantNameRecyclerView" />
+
+            <TextView
+                android:id="@+id/couponHeaderTextView"
+                style="@style/H2.Trout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:text="@string/special_coupons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/couponRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/contentCardMarginTop"
+                android:paddingStart="@dimen/couponHorizontalPadding"
+                android:paddingEnd="@dimen/couponHorizontalPadding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponHeaderTextView" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="9dp"
+                android:background="@color/catskillWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponRecyclerView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groceryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view4"
+                tools:listitem="@layout/item_shelf_product" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/bottomSpaceView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/groceryRecyclerView" />
+
+            <View
+                android:id="@+id/bottomSpaceView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/storyRecyclerView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <namit.retail_app.core.presentation.cart_button.FloatCartButton
+        android:id="@+id/floatCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

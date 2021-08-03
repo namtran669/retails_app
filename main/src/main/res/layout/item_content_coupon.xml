@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/couponCardWidth"
+    android:layout_height="@dimen/couponCardHeight"
+    android:layout_marginStart="@dimen/contentCardMarginStart"
+    android:layout_marginTop="@dimen/contentCardMarginTop"
+    android:layout_marginEnd="@dimen/contentCardMarginEnd"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/contentCardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ic_wallet"
+            android:tint="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/couponTitleTextView"
+            style="@style/H6.White80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:text="Code" />
+
+        <TextView
+            android:id="@+id/couponCodeTextView"
+            style="@style/P2.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/couponTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/couponTitleTextView"
+            android:text="FIRST60" />
+
+        <TextView
+            android:id="@+id/couponDiscountValueTextView"
+            style="@style/P7.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="20$" />
+
+        <TextView
+            android:id="@+id/couponDayToLeftTextView"
+            style="@style/H6.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="49 Days Left" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

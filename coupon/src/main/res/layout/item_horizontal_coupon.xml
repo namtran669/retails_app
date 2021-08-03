@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/couponCardWidth"
+    android:layout_height="@dimen/couponCardHeight"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom">
+
+    <ImageView
+        android:id="@+id/couponBackgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_horizontal_coupon"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="-13dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/couponBasketImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_coupon_convenience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/couponLineImageView"
+        android:layout_width="1dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_coupon_line_white"
+        app:layout_constraintStart_toEndOf="@id/couponBasketImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/couponStoreNameTextView"
+        style="@style/L1.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@id/couponStoreTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/couponLineImageView"
+        app:layout_constraintTop_toTopOf="@id/couponLineImageView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Banana AT" />
+
+    <TextView
+        android:id="@+id/couponStoreTitleTextView"
+        style="@style/H2.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@id/couponLineImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/couponLineImageView"
+        app:layout_constraintTop_toBottomOf="@id/couponStoreNameTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="HALF PRICE" />
+
+    <ImageView
+        android:id="@+id/couponTimerImageView"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/ic_coupon_countdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/couponBasketImageView"
+        app:layout_constraintStart_toStartOf="@+id/couponBasketImageView"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/couponTimerTextView"
+        style="@style/B9.Coral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@id/couponTimerImageView"
+        app:layout_constraintStart_toEndOf="@id/couponTimerImageView"
+        app:layout_constraintTop_toTopOf="@id/couponTimerImageView"
+        tools:text="01:00:00" />
+
+    <TextView
+        android:id="@+id/couponSeeDetailTextView"
+        style="@style/R9.DodgerBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="@string/see_details"
+        app:layout_constraintBottom_toBottomOf="@id/couponTimerImageView"
+        app:layout_constraintEnd_toStartOf="@+id/couponForwardImageView"
+        app:layout_constraintTop_toTopOf="@id/couponTimerImageView" />
+
+    <ImageView
+        android:id="@+id/couponForwardImageView"
+        android:layout_width="7dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/ic_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/couponSeeDetailTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

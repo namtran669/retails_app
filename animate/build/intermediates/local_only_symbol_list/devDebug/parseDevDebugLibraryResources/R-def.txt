@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+dimen weatherViewHeight
+drawable bg_weather_morning
+drawable ic_weather_morning_cloud
+drawable ic_weather_morning_wefresh
+id weatherMorningBgHomeImageView
+id weatherMorningCloud1HomeImageView
+id weatherMorningCloud2HomeImageView
+id weatherMorningLogoHomeImageView
+layout fragment_weather_morning
+string app_name

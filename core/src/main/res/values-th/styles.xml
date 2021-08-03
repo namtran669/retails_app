@@ -1,0 +1,455 @@
+<resources>
+
+    <!--Font style H1-->
+    <style name="H1">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style H1.5-->
+    <style name="H1.5">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!--Font style H2-->
+    <style name="H2">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="H2.Trout.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="H2.Trout.Medium">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+    </style>
+
+    <style name="H2.Trout.Normal.Medium">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+    </style>
+
+    <!--Font style H3-->
+    <style name="H3">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <!--Font style H4-->
+    <style name="H4">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style H5-->
+    <style name="H5">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22.9sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!--Font style H6-->
+    <style name="H6">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style P1-->
+    <style name="P1">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style P2-->
+    <style name="P2">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="P2.Trout.Medium">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+    </style>
+
+    <!--Font style P3-->
+    <style name="P3">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <style name="P3.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P3.Trout40.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style P4-->
+    <style name="P4">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style P5-->
+    <style name="P5">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style P6-->
+    <style name="P6">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P6.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="P6.White.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="P6.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P6.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+    <style name="P6.Black50">
+        <item name="android:textColor">@color/black50</item>
+    </style>
+
+    <!--Font style P7-->
+    <style name="P7">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style B1-->
+    <style name="B1">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">27sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!--Font style L1-->
+    <style name="L1">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style L2-->
+    <style name="L2">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    
+    <!--Font style C2-->
+    <style name="C2">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style C3-->
+    <style name="C3">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style C4-->
+    <style name="C4">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">7sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style C5-->
+    <style name="C5">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style C7-->
+    <style name="C7">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--Font style L3-->
+    <style name="L3">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style L4-->
+    <style name="L4">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Button Pattern : WidgetName.TextColorBackgroundColor-->
+    <!--Button Style -->
+    <style name="MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="MaterialButtonUnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="MaterialButtonTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <!-- Text Style B9 Un-GuideStyle -->
+    <style name="B9">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <!-- Text Style B30 Un-GuideStyle -->
+    <style name="B30">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    
+    <!-- Text Style B18 Un-GuideStyle -->
+    <style name="B18">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Text Style B15 Un-GuideStyle -->
+    <style name="B15">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Text Style B24 Un-GuideStyle -->
+    <style name="B24">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <!-- Text Style B24 Un-GuideStyle -->
+    <style name="B12">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <!-- Text Style M12 Un-GuideStyle -->
+    <style name="M12">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <!-- Text Style M15 Un-GuideStyle -->
+    <style name="M15">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Text Style M18 Un-GuideStyle -->
+    <style name="M18">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Text Style M35-->
+    <style name="M35">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <!-- Text Style TH1 GuideStyle -->
+    <style name="TH1">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Text Style R9 Un-GuideStyle -->
+    <style name="R9">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="R14">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Text Style R15 Un-GuideStyle -->
+    <style name="R15">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Text Style R16 Un-GuideStyle -->
+    <style name="R16">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="MaterialEditText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MaterialEditText.White">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="MaterialEditText.Trout">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/trout</item>
+        <item name="android:textColorHint">@color/trout50</item>
+    </style>
+
+    <!-- Text Style R17 Un-GuideStyle -->
+    <style name="R17">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    
+    <!-- Text Style R20 Un-GuideStyle -->
+    <style name="R20">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Text Style R24 Un-GuideStyle -->
+    <style name="R24">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- Text Style R18 Un-GuideStyle -->
+    <style name="R18">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- MaterialTextInputLayout -->
+    <style name="MaterialTextInputLayout" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/prompt</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MaterialTextInputLayout.WhiteSmall">
+        <item name="android:textColor">@color/white80</item>
+        <item name="android:textColorHint">@color/white80</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/prompt_medium</item>
+    </style>
+
+    <style name="MaterialTextInputLayout.White40Small">
+        <item name="android:textColor">@color/white40</item>
+        <item name="android:textColorHint">@color/white40</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/prompt_medium</item>
+    </style>
+
+    <style name="MaterialTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Button Style H1 -->
+    <style name="MaterialOutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+
+</resources>

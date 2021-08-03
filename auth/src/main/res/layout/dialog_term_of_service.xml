@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/defaultViewMargin"
+        android:background="@drawable/shape_white_30_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/H1.Trout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:text="@string/privacy_policy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mukesh.MarkdownView
+            android:id="@+id/termOfServiceTextView"
+            style="@style/P2.Trout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:layout_marginBottom="@dimen/defaultViewMargin"
+            app:layout_constraintBottom_toTopOf="@+id/agreeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/agreeButton"
+            style="@style/MaterialTextButton.H1.WhiteDodgerBlueTropicalBlue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/defaultButtonHeight"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:layout_marginBottom="4dp"
+            android:text="@string/agree"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@id/dontAgreeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dontAgreeButton"
+            style="@style/MaterialTextButton.H1.DodgerBlueWhite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/defaultButtonHeight"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:layout_marginBottom="@dimen/defaultViewMargin"
+            android:text="@string/dont_agree"
+            android:textAllCaps="true"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

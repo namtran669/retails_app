@@ -1,0 +1,44 @@
+query TermOfServices {
+    privacies (limit:1) {
+        Body
+    }
+}
+
+query ArticleListQuery {
+    articles {
+        id
+        Title
+        Banner {
+            url
+        }
+        created_at
+        updated_at
+        Body
+    }
+}
+
+query PromotionsListQuery {
+    promotions {
+        id
+        Title
+        Body
+        Banner{
+            url
+        }
+        created_at
+        updated_at
+    }
+}
+
+query AnnoucementListQuery {
+    annoucements{
+        id
+        Body
+        Announcements
+        Image{
+            url
+        }
+        created_at
+        updated_at
+    }
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <namit.retail_app.core.presentation.widget.SimpleToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/storyDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/actionButton"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/storyImageView"
+                android:layout_width="match_parent"
+                android:layout_height="211dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@id/titleTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                style="@style/H2.Trout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toTopOf="@id/markdownView"
+                app:layout_constraintTop_toBottomOf="@id/storyImageView"
+                tools:text="Lorem ipsum dolor sit amet Cons ectetur adipiscing" />
+
+            <com.mukesh.MarkdownView
+                android:id="@+id/markdownView"
+                style="@style/P2.Trout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="@dimen/defaultViewMargin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/actionButton"
+        style="@style/MaterialTextButton.H1.WhiteDodgerBlueTropicalBlue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/defaultButtonHeight"
+        android:layout_marginStart="@dimen/defaultViewMargin"
+        android:layout_marginEnd="@dimen/defaultViewMargin"
+        android:layout_marginBottom="30dp"
+        android:text="@string/order_now"
+        android:textAllCaps="true"
+        app:cornerRadius="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storyDetailScrollView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

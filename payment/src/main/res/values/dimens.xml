@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paymentCardCornerRadius">15dp</dimen>
+    <dimen name="paymentCardWidth">295dp</dimen>
+    <dimen name="paymentCardHeight">188dp</dimen>
+    <dimen name="trueMoneyWidth">87dp</dimen>
+    <dimen name="trueMoneyHeight">40dp</dimen>
+    <dimen name="spaceBetweenViewOnAddCreditCard">17dp</dimen>
+    <dimen name="removePaymentButtonWidth">68dp</dimen>
+</resources>

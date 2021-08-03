@@ -1,0 +1,22 @@
+<resources>
+    <string name="trueid_client_id">2721</string>
+    <string name="trueid_client_flow">422424c8bf2ab8e3acb2bf9b925734f3</string>
+    <string name="skip">ข้าม</string>
+    <string name="or">หรือ</string>
+    <string name="welcome">ยินดีต้อนรับ</string>
+    <string name="true_id_member">กรอกเบอร์โทรศัพท์เพื่อเข้าระบบ</string>
+    <string name="with_true_id">เข้าระบบด้วย</string>
+    <string name="enter_phone_number">กรอกเบอร์โทรศัพท์</string>
+    <string name="sending_sms_otp_inform">กำลังส่ง SMS</string>
+    <string name="verify_phone_number">ยืนยันเบอร์โทรศัพท์ของคุณ</string>
+    <string name="require_enter_otp_number">กรุณากรอกรหัสยืนยัน 6 หลักที่เราส่งไป</string>
+    <string name="please_try_again">กรุณาลองอีกครั้ง</string>
+    <string name="thank_you_title">ขอบคุณค่ะ</string>
+    <string name="did_not_receive_code">ฉันไม่ได้รับรหัสยืนยัน</string>
+    <string name="resend_again">ส่งรหัสยืนยันอีกครั้ง</string>
+    <string name="second">วินาที</string>
+    <string name="by_signing_up_you_agree_to_our"><![CDATA[การกดยืนยันลงทะเบียน ถือเป็นการยินยอมข้อกำหนด]]></string>
+    <string name="terms_conditions_amp_privacy_policy"><u>เงื่อนไข และนโยบายความเป็นส่วนตัว</u></string>
+    <string name="enter_your_otp_code">กรอกรหัสยืนยันของคุณ</string>
+    <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
+</resources>

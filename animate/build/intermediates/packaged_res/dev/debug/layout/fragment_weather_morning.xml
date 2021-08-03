@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weatherViewHeight">
+
+    <ImageView
+        android:id="@+id/weatherMorningBgHomeImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_weather_morning"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/weatherMorningCloud2HomeImageView"
+        android:layout_width="31dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_weather_morning_cloud"
+        app:layout_constraintEnd_toEndOf="@+id/weatherMorningBgHomeImageView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/weatherMorningCloud1HomeImageView"
+        app:layout_constraintTop_toTopOf="@id/weatherMorningLogoHomeImageView" />
+
+    <ImageView
+        android:id="@+id/weatherMorningLogoHomeImageView"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/ic_weather_morning_wefresh"
+        app:layout_constraintEnd_toEndOf="@id/weatherMorningBgHomeImageView"
+        app:layout_constraintStart_toStartOf="@id/weatherMorningBgHomeImageView"
+        app:layout_constraintTop_toTopOf="@id/weatherMorningBgHomeImageView" />
+
+    <ImageView
+        android:id="@+id/weatherMorningCloud1HomeImageView"
+        android:layout_width="31dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_weather_morning_cloud"
+        app:layout_constraintEnd_toStartOf="@+id/weatherMorningCloud2HomeImageView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weatherMorningLogoHomeImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

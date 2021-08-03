@@ -1,0 +1,13 @@
+<resources>
+    <string name="best_deal_from_makro">Best Deal From Makro</string>
+    <string name="see_all">ดูทั้งหมด</string>
+    <string name="aisles">ประเภทสินค้า</string>
+    <string name="date_only_sample">22–28 Oct 2019 Only</string>
+    <string name="grocery_delivery_warning_detail">Avoid multiple delivery fee by\npurchasing all your products\nfrom one merchant!</string>
+    <string name="go_to_store_warning">Go To %1$s Store</string>
+    <string name="show_me_all_products_warning">It’s OK, Show Me All Products</string>
+    <string name="delivery_warning_header">You are buying this product from</string>
+    <string name="featured_categories">Featured categories</string>
+    <string name="all_catalog">ประเภทสินค้า</string>
+    <string name="weekly_selection_of_best_products">จาก </string>
+</resources>

@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "URL_UPDATE_APP", "\"https://play.google.com/store/apps/details?id=asia.sendit.wefresh.customer&hl=en\""
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        dev.java.srcDirs += 'src/dev/kotlin'
+        prod.java.srcDirs += 'src/prod/kotlin'
+        staging.java.srcDirs += 'src/staging/kotlin'
+    }
+
+    flavorDimensions 'mode'
+    productFlavors {
+        dev {
+            dimension "mode"
+        }
+
+        staging {
+            dimension "mode"
+        }
+
+        prod {
+            dimension "mode"
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def ext = rootProject.ext
+
+    // Dependencies for local unit tests
+    testImplementation ext.test.junit
+    testImplementation ext.test.mockitoCore
+    testImplementation ext.test.mockitoKotlin
+    testImplementation ext.test.mockitoInline
+    testImplementation ext.test.archTest
+    testImplementation ext.test.coroutineTest
+    testImplementation ext.test.koinTest
+
+    testImplementation project(':testutils')
+}

@@ -1,0 +1,365 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+union Morph = Article | Recipes | UploadFile | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser | createArticlePayload | createRecipesPayload | createRolePayload | createUserPayload | deleteArticlePayload | deleteRecipesPayload | deleteRolePayload | deleteUserPayload | updateArticlePayload | updateRecipesPayload | updateRolePayload | updateUserPayload
+
+"This is an article"
+type Article {
+    Article: String
+    Category: String
+    Description: String
+    Image: UploadFile
+    Position: Int
+    Published: DateTime
+    Title: String
+    created_at: DateTime!
+    id: ID!
+    updated_at: DateTime!
+}
+
+type Mutation {
+    createArticle(input: createArticleInput): createArticlePayload
+    createRecipes(input: createRecipesInput): createRecipesPayload
+    "Create a new role"
+    createRole(input: createRoleInput): createRolePayload
+    "Create a new user"
+    createUser(input: createUserInput): createUserPayload
+    deleteArticle(input: deleteArticleInput): deleteArticlePayload
+    deleteRecipes(input: deleteRecipesInput): deleteRecipesPayload
+    "Delete an existing role"
+    deleteRole(input: deleteRoleInput): deleteRolePayload
+    "Delete an existing user"
+    deleteUser(input: deleteUserInput): deleteUserPayload
+    login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
+    multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID, source: String): [UploadFile]!
+    register(input: UserInput!): UsersPermissionsLoginPayload!
+    updateArticle(input: updateArticleInput): updateArticlePayload
+    updateRecipes(input: updateRecipesInput): updateRecipesPayload
+    "Update an existing role"
+    updateRole(input: updateRoleInput): updateRolePayload
+    "Update an existing user"
+    updateUser(input: updateUserInput): updateUserPayload
+    upload(field: String, file: Upload!, ref: String, refId: ID, source: String): UploadFile!
+}
+
+type Query {
+    article(id: ID!): Article
+    articles(limit: Int, sort: String, start: Int, where: JSON): [Article]
+    files(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    me: UsersPermissionsMe
+    recipe(id: ID!): Recipes
+    recipes(limit: Int, sort: String, start: Int, where: JSON): [Recipes]
+    role(id: ID!): UsersPermissionsRole
+    "Retrieve all the existing roles. You can't apply filters on this query."
+    roles(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+    user(id: ID!): UsersPermissionsUser
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+"Recipes content"
+type Recipes {
+    Description: String
+    Picture: UploadFile
+    Recipe_steps: String
+    Title: String
+    created_at: DateTime!
+    id: ID!
+    updated_at: DateTime!
+}
+
+type UploadFile {
+    created_at: DateTime!
+    ext: String
+    hash: String!
+    id: ID!
+    mime: String!
+    name: String!
+    provider: String!
+    provider_metadata: JSON
+    related(limit: Int, sort: String, start: Int, where: JSON): [Morph]
+    sha256: String
+    size: String!
+    updated_at: DateTime!
+    url: String!
+}
+
+type UsersPermissionsLoginPayload {
+    jwt: String!
+    user: UsersPermissionsUser!
+}
+
+type UsersPermissionsMe {
+    blocked: Boolean
+    confirmed: Boolean
+    email: String!
+    id: ID!
+    role: UsersPermissionsMeRole
+    username: String!
+}
+
+type UsersPermissionsMeRole {
+    description: String
+    id: ID!
+    name: String!
+    type: String
+}
+
+type UsersPermissionsPermission {
+    action: String!
+    controller: String!
+    enabled: Boolean!
+    id: ID!
+    policy: String
+    role: UsersPermissionsRole
+    type: String!
+}
+
+type UsersPermissionsRole {
+    description: String
+    id: ID!
+    name: String!
+    permissions(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsPermission]
+    type: String
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsUser {
+    blocked: Boolean
+    confirmed: Boolean
+    created_at: DateTime!
+    email: String!
+    id: ID!
+    provider: String
+    role: UsersPermissionsRole
+    updated_at: DateTime!
+    username: String!
+}
+
+type createArticlePayload {
+    article: Article
+}
+
+type createRecipesPayload {
+    recipe: Recipes
+}
+
+type createRolePayload {
+    role: UsersPermissionsRole
+}
+
+type createUserPayload {
+    user: UsersPermissionsUser
+}
+
+type deleteArticlePayload {
+    article: Article
+}
+
+type deleteRecipesPayload {
+    recipe: Recipes
+}
+
+type deleteRolePayload {
+    role: UsersPermissionsRole
+}
+
+type deleteUserPayload {
+    user: UsersPermissionsUser
+}
+
+type updateArticlePayload {
+    article: Article
+}
+
+type updateRecipesPayload {
+    recipe: Recipes
+}
+
+type updateRolePayload {
+    role: UsersPermissionsRole
+}
+
+type updateUserPayload {
+    user: UsersPermissionsUser
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+input ArticleInput {
+    Article: String
+    Category: String
+    Description: String
+    Image: ID
+    Position: Int
+    Published: DateTime
+    Title: String
+}
+
+input FileInput {
+    ext: String
+    hash: String!
+    mime: String!
+    name: String!
+    provider: String!
+    provider_metadata: JSON
+    related: [ID]
+    sha256: String
+    size: String!
+    url: String!
+}
+
+input InputID {
+    id: ID!
+}
+
+input RecipesInput {
+    Description: String
+    Picture: ID
+    Recipe_steps: String
+    Title: String
+}
+
+input RoleInput {
+    description: String
+    name: String!
+    permissions: [ID]
+    type: String
+    users: [ID]
+}
+
+input UserInput {
+    blocked: Boolean
+    confirmed: Boolean
+    email: String!
+    password: String
+    provider: String
+    resetPasswordToken: String
+    role: ID
+    username: String!
+}
+
+input UsersPermissionsLoginInput {
+    identifier: String!
+    password: String!
+    provider: String = "local"
+}
+
+input createArticleInput {
+    data: ArticleInput
+}
+
+input createRecipesInput {
+    data: RecipesInput
+}
+
+input createRoleInput {
+    data: RoleInput
+}
+
+input createUserInput {
+    data: UserInput
+}
+
+input deleteArticleInput {
+    where: InputID
+}
+
+input deleteRecipesInput {
+    where: InputID
+}
+
+input deleteRoleInput {
+    where: InputID
+}
+
+input deleteUserInput {
+    where: InputID
+}
+
+input editArticleInput {
+    Article: String
+    Category: String
+    Description: String
+    Image: ID
+    Position: Int
+    Published: DateTime
+    Title: String
+}
+
+input editFileInput {
+    ext: String
+    hash: String
+    mime: String
+    name: String
+    provider: String
+    provider_metadata: JSON
+    related: [ID]
+    sha256: String
+    size: String
+    url: String
+}
+
+input editRecipesInput {
+    Description: String
+    Picture: ID
+    Recipe_steps: String
+    Title: String
+}
+
+input editRoleInput {
+    description: String
+    name: String
+    permissions: [ID]
+    type: String
+    users: [ID]
+}
+
+input editUserInput {
+    blocked: Boolean
+    confirmed: Boolean
+    email: String
+    password: String
+    provider: String
+    resetPasswordToken: String
+    role: ID
+    username: String
+}
+
+input updateArticleInput {
+    data: editArticleInput
+    where: InputID
+}
+
+input updateRecipesInput {
+    data: editRecipesInput
+    where: InputID
+}
+
+input updateRoleInput {
+    data: editRoleInput
+    where: InputID
+}
+
+input updateUserInput {
+    data: editUserInput
+    where: InputID
+}
+
+
+"The `DateTime` scalar represents a date and time following the ISO 8601 standard"
+scalar DateTime
+
+scalar JSON
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload
+
+"The `Long` scalar type represents 52-bit integers"
+scalar Long

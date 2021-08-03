@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">home</string>
+    <string name="home_category_seven">Store</string>
+    <string name="home_category_grocery">Grocery</string>
+    <string name="home_category_cafe">Cafe</string>
+    <string name="home_category_food">Food</string>
+    <string name="tab_home_bottom_menu"><b>HOME</b></string>
+    <string name="tab_inbox_bottom_menu"><b>INBOX</b></string>
+    <string name="tab_coupon_bottom_menu"><b>COUPON</b></string>
+    <string name="tab_orders_bottom_menu"><b>ORDERS</b></string>
+    <string name="tab_profile_bottom_menu"><b>PROFILE</b></string>
+    <string name="version_app">Version</string>
+    <string name="name">Name</string>
+    <string name="view_my_profile">View my profile</string>
+    <string name="my_payment">My Payment</string>
+    <string name="my_address">My Address</string>
+    <string name="settings">Settings</string>
+    <string name="help_center">Help Center</string>
+    <string name="my_profile">My Profile</string>
+    <string name="language">Language</string>
+    <string name="notification">Notification</string>
+    <string name="save">Save</string>
+    <string name="thai">Thai</string>
+    <string name="english">English</string>
+    <string name="email">E-mail</string>
+    <string name="logout">Logout</string>
+    <string name="edit">Edit</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="good_morning">Good Morning!</string>
+    <string name="good_afternoon">Good Afternoon!</string>
+    <string name="good_evening">Good Evening!</string>
+
+</resources>

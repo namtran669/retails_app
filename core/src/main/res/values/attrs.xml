@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="toolbarBackground" format="reference|color" />
+    <declare-styleable name="DeliveryToolbar">
+        <attr name="toolbarBackground"/>
+        <attr name="isShowAddress" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SimpleToolbar">
+        <attr name="toolbarBackground"/>
+        <attr name="titleContent" format="string|reference"/>
+        <attr name="hasBack" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProductCategory">
+        <attr name="categoryBackground" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ShelfHeaderSkeletonView">
+        <attr name="hasSubTitle" format="boolean" />
+        <attr name="hasSeeAll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FilterSortBar">
+        <attr name="barBackground" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IconWithTitleToolbar">
+        <attr name="toolbarBackground" />
+    </declare-styleable>
+</resources>

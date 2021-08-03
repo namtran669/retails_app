@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.auth">
+
+    <application>
+        <activity
+            android:name="namit.retail_app.auth.presentation.LoginActivity"
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar" />
+
+        <activity
+            android:name="namit.retail_app.auth.presentation.trueid.AuthWithTrueIDActivity"
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar" >
+            <intent-filter>
+                <data android:scheme="@string/trueid_client_id" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

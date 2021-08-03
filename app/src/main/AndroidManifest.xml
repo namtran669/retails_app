@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="namit.retail_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="remove" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS"
+        tools:node="remove" />
+
+    <application
+        android:name="namit.retail_app.app.application.RetailApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        tools:replace="android:allowBackup">
+
+        <activity android:name="namit.retail_app.app.presentation.splash.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="@string/branchScheme" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- TODO Branch App Links (optional) -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/branchAppLink"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/branchAppLinkAlternate"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <!--BRANCH IO-->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="@string/branchKey" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="@string/branchKey" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="@string/branchTestMode" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name="namit.retail_app.core.presentation.search.SearchActivity"
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name="namit.retail_app.app.presentation.onboard.OnboardActivity"
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar" />
+
+        <!--REQUIRED FOR MAPS-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA1suobzXQdtbq1T6tgUaUo87eE7i_FUEo" />
+    </application>
+</manifest>

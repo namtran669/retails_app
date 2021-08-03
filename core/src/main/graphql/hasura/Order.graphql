@@ -1,0 +1,89 @@
+mutation createOrder(
+    $pickUpSlot: String,
+    $cartId: Int!,
+    $paymentMethodId: Int!,
+    $shipAddress: shippingAddressInput!,
+    $userPaymentMethodId: Int
+    $campaignCodes: [String!]) {
+    createOrder(payload: {
+        pickup_slot: $pickUpSlot,
+        shipping_address: $shipAddress,
+        cart_id: $cartId,
+        payment_method_id: $paymentMethodId,
+        user_payment_method_id: $userPaymentMethodId,
+        campaign_codes: $campaignCodes
+    }) {
+        ...OrderElement
+    }
+}
+
+query getListOrder($page: Int!, $limit: Int!, $type: String!) {
+    orders(pagination: {page: $page, limit: $limit}, where: {type: {_eq: $type}}) {
+        items {
+            ...OrderElement
+        }
+    }
+}
+
+query getOrderStatus($secureKey: String!) {
+    order(where: {
+        secure_key: {
+            _eq: $secureKey
+        }
+    }) {
+        current_order_status
+    }
+}
+
+mutation cancelOrder($secureKey: String!) {
+    cancelOrder(payload:{secure_key:$secureKey}){
+        ...OrderElement
+    }
+}
+
+fragment OrderElement on Order {
+    total
+    final_price
+    created_at
+    current_order_status
+    secure_key
+    pickup_at
+    order_address {
+        delivery_address_1
+    }
+    order_product {
+        title
+        quantity
+        price
+        final_price
+        product_id
+    }
+    order_store_info {
+        store_id
+        store_name
+        title
+        address
+        cover
+        logo
+    }
+    shipping {
+        shipping_price
+    }
+    discount
+    payment {
+        payment_amount
+        payment_company
+        payment_method
+    }
+    payment_detail {
+        source {
+            brand
+            card_last_digits
+        }
+        order_id
+        user_id
+        status
+        payment_transactions_id
+        error
+    }
+}

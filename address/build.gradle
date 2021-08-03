@@ -1,0 +1,14 @@
+apply from: '../base_module_config.gradle'
+
+dependencies {
+    def ext = rootProject.ext
+    implementation project(":core")
+    implementation project(":maps")
+
+    api ext.googlePlayService.maps
+    api ext.googlePlayService.location
+
+    api ext.tagView
+}
+
+android { sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable'] } } }

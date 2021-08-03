@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.grocery">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application>
+        <activity
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar"
+            android:name="namit.retail_app.grocery.presentation.main_wrapper.GroceryWrapperActivity" />
+    </application>
+
+</manifest>

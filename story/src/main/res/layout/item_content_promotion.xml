@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/contentCardViewWidth"
+    android:layout_height="@dimen/contentCardViewHeight"
+    android:layout_marginStart="@dimen/contentCardMarginStart"
+    android:layout_marginTop="@dimen/contentCardMarginTop"
+    android:layout_marginEnd="@dimen/contentCardMarginEnd"
+    android:layout_marginBottom="@dimen/contentCardMarginBottom"
+    android:background="@drawable/shape_white_15_radius"
+    app:cardCornerRadius="@dimen/contentCardCornerRadius"
+    app:cardElevation="@dimen/contentCardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/promotionImageHomeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/contentCardStoryImageHeight"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/promotionTitleHomeImageView"
+            style="@style/H3.Trout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:lineSpacingExtra="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@id/promotionImageHomeImageView"
+            tools:text="Free drink on every purchase at participated restaurant" />
+
+        <TextView
+            android:id="@+id/promotionDateTimeHomeTextView"
+            style="@style/P2.Trout50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintTop_toBottomOf="@id/promotionTitleHomeImageView"
+            tools:text="From 16 - 28 Oct 19" />
+
+        <Button
+            android:id="@+id/promotionReadMoreButton"
+            style="@style/MaterialButtonTextButton.H1.DodgerBlueWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/content_read_more"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/promotionDateTimeHomeTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

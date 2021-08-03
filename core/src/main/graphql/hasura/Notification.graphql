@@ -1,0 +1,17 @@
+mutation createNotificationToken($uuid: String!, $token: String!) {
+    createNotificationToken(payload: {uuid: $uuid, token: $token, provider: FIREBASE}) {
+        __typename
+        uuid
+        token
+        provider
+    }
+}
+
+mutation updateNotificationToken($uuid: String!, $status: Status) {
+    updateNotificationToken(payload: {uuid: $uuid, status: $status}) {
+        __typename
+        user_id
+        uuid
+        token
+    }
+}

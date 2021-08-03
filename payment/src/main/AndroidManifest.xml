@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="namit.retail_app.payment" >
+
+    <application>
+        <activity
+            android:name="namit.retail_app.payment.presentation.PaymentActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.FullScreen.WhiteStatusBar" />
+    </application>
+
+</manifest>

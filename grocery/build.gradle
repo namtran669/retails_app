@@ -1,0 +1,14 @@
+apply from: '../base_module_config.gradle'
+
+dependencies {
+    def ext = rootProject.ext
+    implementation project(":core")
+    implementation project(":coupon")
+    implementation project(":story")
+    implementation project(":cart")
+    implementation project(":order")
+    implementation project(":address")
+    implementation project(":maps")
+}
+
+android { sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable'] } } }

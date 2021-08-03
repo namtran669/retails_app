@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "375318688700",
+    "firebase_url": "https://ascend-wefresh.firebaseio.com",
+    "project_id": "ascend-wefresh",
+    "storage_bucket": "ascend-wefresh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375318688700:android:18dab2215120c7c4d9f1b9",
+        "android_client_info": {
+          "package_name": "ascend.food.wefresh.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbuMOkMvr_gLzFmlxwjJqJbt17G4mN8FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375318688700-sq5slgl0jncabs85dnmnbn6ep0g3juc6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ascend.food.wefresh.staging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375318688700:android:43ab1affe95e4afed9f1b9",
+        "android_client_info": {
+          "package_name": "ascend.food.wefresh.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbuMOkMvr_gLzFmlxwjJqJbt17G4mN8FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375318688700-sq5slgl0jncabs85dnmnbn6ep0g3juc6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ascend.food.wefresh.staging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375318688700:android:6f1bcd95e3fae621d9f1b9",
+        "android_client_info": {
+          "package_name": "asia.sendit.wefresh.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbuMOkMvr_gLzFmlxwjJqJbt17G4mN8FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375318688700-hmrn9jmttpu7imaul47m6pqe2jvg4qp9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "375318688700-sq5slgl0jncabs85dnmnbn6ep0g3juc6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ascend.food.wefresh.staging"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

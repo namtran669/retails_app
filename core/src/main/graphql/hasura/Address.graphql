@@ -1,0 +1,105 @@
+mutation CreateMyAddress($name: String, $phone: String!, $land_mark: String,
+    $lat: Float!,$lng: Float!, $type_id: Int!, $address: String!,$address_detail: String, $note: String, $is_default: Boolean) {
+    createAddress(payload: {
+        name: $name,
+        phone: $phone,
+        land_mark: $land_mark,
+        lat: $lat,
+        lng: $lng,
+        type_id: $type_id,
+        address: $address,
+        address_details: $address_detail,
+        notes: $note
+        is_default: $is_default
+    }) {
+        id
+        name
+        phone
+        land_mark
+        user_id
+        lat
+        lng
+        type_id
+        address
+        address_details
+        notes
+        is_default
+    }
+}
+
+mutation UpdateMyAddress($id: Int!, $name: String, $phone: String, $land_mark: String,
+    $lat: Float,$lng: Float, $type_id: Int, $address: String, $address_detail: String, $note: String, $is_default: Boolean) {
+    updateAddress(where: {
+        id: {
+            _eq: $id
+        }
+    }, payload : {
+        id: $id,
+        name: $name,
+        phone: $phone,
+        land_mark: $land_mark,
+        lat: $lat,
+        lng: $lng,
+        type_id: $type_id,
+        address: $address,
+        address_details: $address_detail,
+        notes: $note,
+        is_default: $is_default
+    }) {
+        modified
+        edges {
+            id
+            name
+            phone
+            land_mark
+            user_id
+            lat
+            lng
+            type_id
+            address
+            address_details
+            notes
+            is_default
+        }
+    }
+}
+
+mutation DeleteMyAddress($id: Int) {
+    deleteAddress (where: {
+        id: {
+            _eq : $id
+        }
+    }) {
+        ids
+        modified
+    }
+}
+
+query GetMyAddressList {
+    addresses ( pagination : {
+        skip: 0,
+        limit: 100
+    }, where : {
+    }){
+        page_info {
+            total
+            has_more
+            skip
+        }
+        edges {
+            id
+            name
+            phone
+            land_mark
+            user_id
+            lat
+            lng
+            type_id
+            address
+            address_details
+            notes
+            is_default
+        }
+    }
+}
+

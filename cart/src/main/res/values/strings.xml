@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="add_items">Add Items</string>
+    <string name="change">Change</string>
+    <string name="delivers_to">Delivers To</string>
+    <string name="orders">Orders</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="all_delivery_fees">All Delivery Fees</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="enter_here">Enter Here</string>
+    <string name="view">View</string>
+    <string name="total">Total</string>
+    <string name="incl_vat">Total (incl VAT)</string>
+    <string name="proceed">Proceed</string>
+    <string name="place_your_order">Place your order</string>
+    <string name="when">When</string>
+    <string name="default_price_value">฿0</string>
+    <string name="where">Where</string>
+    <string name="delivery_information">Delivery Information</string>
+    <string name="are_you_sure_you_want_to_remove_this_product">Are you sure you want to remove this item?</string>
+    <string name="this_item_will_be_permanently_removed_from_your_cart">This item will be permanently removed from your cart.</string>
+    <string name="create_order_error_title">Oops! Unable to place order</string>
+    <string name="create_order_error_miss_address">Sorry we are unable to place your order without a delivery address. Please set your delivery address.</string>
+    <string name="create_order_error_miss_time_slot">Sorry we are unable to place your order. The time slot you chose is unavailable  please select a new time slot.</string>
+    <string name="create_order_error_miss_payment">Sorry we are unable to place your order without a payment method. Please choose your payment method.</string>
+    <string name="create_order_error_miss_cart">Sorry we are unable to place your order. Please select a store you want to check out.</string>
+    <string name="create_order_error_cart_empty">Sorry your cart is empty. Please continue shopping.</string>
+    <string name="select_new_address">Select Delivery Address</string>
+    <string name="select_new_time">Select new time</string>
+    <string name="select_new_payment">Select payment method</string>
+    <string name="empty_cart_title">Your cart is empty</string>
+    <string name="empty_cart_description">You have not added anything to your cart yet. Start shopping and add items now.</string>
+    <string name="cart_screen_title">Cart</string>
+    <string name="summary">Summary</string>
+    <string name="cart_discount">Discount</string>
+</resources>

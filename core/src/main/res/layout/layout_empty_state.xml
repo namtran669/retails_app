@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/emptyImageView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/img_empty_addresses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emptyTitleTextView"
+        style="@style/H2.Trout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/no_addresses"
+        app:layout_constraintEnd_toEndOf="@+id/emptyImageView"
+        app:layout_constraintStart_toStartOf="@+id/emptyImageView"
+        app:layout_constraintTop_toBottomOf="@+id/emptyImageView" />
+
+    <TextView
+        android:id="@+id/emptyDetailTextView"
+        style="@style/P2.Trout70"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:lines="2"
+        android:text="@string/no_addresses_details"
+        app:layout_constraintEnd_toEndOf="@+id/emptyImageView"
+        app:layout_constraintStart_toStartOf="@+id/emptyImageView"
+        app:layout_constraintTop_toBottomOf="@+id/emptyTitleTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/emptyButton"
+        style="@style/MaterialTextButton.H1.DodgerBlue20DodgerBlue"
+        android:layout_width="265dp"
+        android:layout_height="@dimen/defaultButtonHeight"
+        android:layout_marginTop="40dp"
+        android:text="@string/continue_shopping"
+        app:cornerRadius="15dp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emptyDetailTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

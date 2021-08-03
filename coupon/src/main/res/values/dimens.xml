@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="couponCardWidth">185dp</dimen>
+    <dimen name="couponCardHeight">110dp</dimen>
+    <dimen name="contentCardMarginTop">10dp</dimen>
+    <dimen name="contentCardMarginBottom">15dp</dimen>
+    <dimen name="contentCardMarginStart">5dp</dimen>
+    <dimen name="contentCardMarginEnd">5dp</dimen>
+    <dimen name="contentCardCornerRadius">15dp</dimen>
+    <dimen name="contentCardElevation">4dp</dimen>
+    <dimen name="couponFilterRecyclerViewMargin">18dp</dimen>
+    <dimen name="couponFilterViewMargin">9dp</dimen>
+    <dimen name="couponHorizontalIconSize">18dp</dimen>
+</resources>

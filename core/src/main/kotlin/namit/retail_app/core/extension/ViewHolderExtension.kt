@@ -1,0 +1,1 @@
+package namit.retail_app.core.extensionimport androidx.recyclerview.widget.RecyclerViewfun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int) -> Unit): T {    itemView.setOnClickListener {        event.invoke(getAdapterPosition())    }    return this}

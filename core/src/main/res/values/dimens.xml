@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultViewMargin">20dp</dimen>
+    <dimen name="defaultViewElevation">2dp</dimen>
+    <dimen name="defaultViewLittleMargin">7dp</dimen>
+    <dimen name="defaultButtonHeight">52dp</dimen>
+    <dimen name="defaultViewRadius">15dp</dimen>
+    <dimen name="defaultBottomSpaceViewHeight">80dp</dimen>
+    <dimen name="defaultDialogTopMargin">40dp</dimen>
+    <dimen name="defaultItemListBottomSpace">100dp</dimen>
+    <dimen name="defaultScreenBottomSpace">200dp</dimen>
+
+    <dimen name="productCategorySpaceStartEnd">20dp</dimen>
+    <dimen name="productCategorySpaceBetween">25dp</dimen>
+    <dimen name="productCategorySpaceTopBottom">15dp</dimen>
+
+    <dimen name="contentCardCornerRadius">15dp</dimen>
+    <dimen name="contentCardMarginStartEnd">20dp</dimen>
+    <dimen name="contentCardMarginBetween">15dp</dimen>
+    <dimen name="contentCardMarginTopBottom">15dp</dimen>
+
+    <dimen name="productItemStartEndSpace">10dp</dimen>
+    <dimen name="productItemBetweenSpace">20dp</dimen>
+    <dimen name="productItemTopSpace">15dp</dimen>
+    <dimen name="productItemBottomSpace">30dp</dimen>
+
+    <dimen name="toolbarProductCornerRadius">30dp</dimen>
+    <dimen name="toolbarProductCornerNoRadius">0dp</dimen>
+    <dimen name="toolbarProductElevation">1dp</dimen>
+    <dimen name="toolbarProductNoElevation">0dp</dimen>
+
+    <dimen name="categoryBreadcrumbMarginTop">7dp</dimen>
+    <dimen name="foodDetailCornerRadius">30dp</dimen>
+
+    <dimen name="verticalItemSpacePadding">14dp</dimen>
+    <dimen name="itemProductVerticalWidthScale" type="dimen" format="float">0.42</dimen>
+    <dimen name="itemProductVerticalHeightScale" type="dimen" format="float">1.90</dimen>
+    <dimen name="itemProductHorizontalWidthScale" type="dimen" format="float">0.494</dimen>
+    <dimen name="itemProductHorizontalHeightScale" type="dimen" format="float">1.80</dimen>
+
+    <dimen name="couponHorizontalPadding">11dp</dimen>
+    <dimen name="couponHorizontalMarginTop">10dp</dimen>
+</resources>
+

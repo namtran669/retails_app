@@ -1,0 +1,2 @@
+include ':app', ':core', ':main', ':payment', ':grocery', ':order', ':notification', ':address', ':food',
+        ':auth', ':coupon', ':story', ':cart', ':maps', ':testutils', ':fcm'

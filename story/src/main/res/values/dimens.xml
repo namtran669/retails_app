@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contentCardStoryImageHeight">163dp</dimen>
+    <dimen name="contentCardViewWidth">295dp</dimen>
+    <dimen name="contentCardViewHeight">305dp</dimen>
+    <dimen name="contentCardCornerRadius">15dp</dimen>
+    <dimen name="contentCardElevation">2dp</dimen>
+    <dimen name="contentCardMarginTop">10dp</dimen>
+    <dimen name="contentCardMarginBottom">15dp</dimen>
+    <dimen name="contentCardMarginStart">10dp</dimen>
+    <dimen name="contentCardMarginEnd">10dp</dimen>
+</resources>

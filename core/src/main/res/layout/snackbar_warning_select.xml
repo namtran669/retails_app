@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    android:textColor="@android:color/white"
+    android:gravity="center"
+    tools:text="You can only select 2 items"
+    xmlns:tools="http://schemas.android.com/tools" />
+
+
+
+

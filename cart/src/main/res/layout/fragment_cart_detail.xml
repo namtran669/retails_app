@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/catskillWhite"
+    android:orientation="vertical">
+
+    <namit.retail_app.core.presentation.widget.SimpleToolbar
+        android:id="@+id/cartDetailSimpleToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleContent="@string/cart_screen_title"
+        app:toolbarBackground="@android:color/transparent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cartDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkoutCartLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartDetailSimpleToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/deliveryInfoTitleTextView"
+                style="@style/L1.Trout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/delivery_information"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/deliveryTitleTextView"
+                style="@style/L1.Trout40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="@dimen/defaultViewMargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/where"
+                android:textAllCaps="true" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/deliveryAddressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:foreground="?android:selectableItemBackground"
+                android:padding="@dimen/defaultViewMargin">
+
+                <TextView
+                    android:id="@+id/addressLabelTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toStartOf="@id/changeAddressTextView"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Home" />
+
+                <TextView
+                    android:id="@+id/addressTitleTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressLabelTextView"
+                    tools:text="99/9 Central World" />
+
+                <TextView
+                    android:id="@+id/changeAddressTextView"
+                    style="@style/B15.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:text="@string/change"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="@id/addressLabelTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/addressLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/addressLabelTextView" />
+
+                <TextView
+                    android:id="@+id/addressDetailTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressTitleTextView"
+                    tools:text="No. 189" />
+
+                <TextView
+                    android:id="@+id/addressPhoneTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressDetailTextView"
+                    tools:text="081-123-4567" />
+
+                <TextView
+                    android:id="@+id/addressNoteTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressPhoneTextView"
+                    tools:text="New Keebler Falls,
+Paradise Ave, 11020, ABC" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/timeSlotTitleTextView"
+                style="@style/L1.Trout40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="@dimen/defaultViewMargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/when"
+                android:textAllCaps="true" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timeSlotLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:foreground="?android:selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/pickSlotTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/arrowImageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Mon. Jan 1, 10:00-11:00" />
+
+                <ImageView
+                    android:id="@+id/arrowImageView"
+                    style="@style/B15.DodgerBlue"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:src="@drawable/ic_forward_small"
+                    android:text="@string/change"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="@id/pickSlotTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pickSlotTextView"
+                    app:layout_constraintTop_toTopOf="@id/pickSlotTextView"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/ordersTitleTextView"
+                style="@style/L1.Trout40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="@dimen/defaultViewMargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/orders"
+                android:textAllCaps="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartMerchantRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="0"
+                tools:listitem="@layout/item_shelf_cart_merchant" />
+
+            <TextView
+                android:id="@+id/paymentMethodTitleTextView"
+                style="@style/L1.Trout40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="@dimen/defaultViewMargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/payment_method"
+                android:textAllCaps="true" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentSelectMethodLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/showAllProductButton"
+                    style="@style/MaterialTextButton.H1.DodgerBlue20DodgerBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="@string/select_payment_method"
+                    android:textAllCaps="true"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentCurrentMethodLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="@dimen/defaultViewMargin"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/paymentImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_catskillwhite_10_radius"
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/titleTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/ic_payment_true_money" />
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    style="@style/H3.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/descTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/changePaymentTextView"
+                    app:layout_constraintStart_toEndOf="@+id/paymentImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Cash on Delivery" />
+
+                <TextView
+                    android:id="@+id/descTextView"
+                    style="@style/P2.Trout50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+                    app:layout_constraintStart_toStartOf="@+id/titleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+                    tools:text="Wat Suwan" />
+
+                <TextView
+                    android:id="@+id/changePaymentTextView"
+                    style="@style/B15.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:text="@string/change"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/summaryTitleTextView"
+                style="@style/L1.Trout40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/defaultViewMargin"
+                android:layout_marginTop="@dimen/defaultViewMargin"
+                android:layout_marginBottom="10dp"
+                android:text="@string/summary"
+                android:textAllCaps="true" />
+
+            <TextView
+                android:id="@+id/suggestPromotionTextView"
+                style="@style/M15.White"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/neonCarrot"
+                android:gravity="center"
+                android:text="You saved 70B (22%) from your shopping today"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/subTotalTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="@dimen/defaultViewMargin"
+                    android:text="@string/subtotal"
+                    app:layout_constraintEnd_toStartOf="@+id/subTotalContentTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/subTotalContentTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/defaultViewMargin"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/default_price_value"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/subTotalTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="฿1465" />
+
+                <TextView
+                    android:id="@+id/deliveryFeeTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/all_delivery_fees"
+                    app:layout_constraintEnd_toStartOf="@+id/deliveryFeeContentTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subTotalTextView" />
+
+                <TextView
+                    android:id="@+id/deliveryFeeContentTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/default_price_value"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/deliveryFeeTextView"
+                    app:layout_constraintTop_toTopOf="@+id/deliveryFeeTextView"
+                    tools:text="฿1465" />
+
+                <TextView
+                    android:id="@+id/discountTitleTextView"
+                    style="@style/H4.DodgerBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/cart_discount"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/discountTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deliveryFeeTextView" />
+
+                <TextView
+                    android:id="@+id/discountTextView"
+                    style="@style/H4.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:text="@string/default_price_value"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/discountTitleTextView"
+                    app:layout_constraintTop_toTopOf="@+id/discountTitleTextView"
+                    tools:text="฿1465" />
+
+                <TextView
+                    android:id="@+id/campaignTitleTextView"
+                    style="@style/H4.DodgerBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/pattensBlue"
+                    android:paddingStart="@dimen/defaultViewMargin"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="@dimen/defaultViewMargin"
+                    android:paddingBottom="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discountTitleTextView" />
+
+                <TextView
+                    android:id="@+id/promoCodeTextView"
+                    style="@style/H4.Trout70"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/promo_code"
+                    app:layout_constraintEnd_toStartOf="@+id/enterPromoteCodeTextView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/campaignTitleTextView" />
+
+                <TextView
+                    android:id="@+id/enterPromoteCodeTextView"
+                    style="@style/P2.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:text="@string/enter_here"
+                    app:layout_constraintBottom_toBottomOf="@+id/promoCodeTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/promoCodeTextView"
+                    app:layout_constraintTop_toTopOf="@+id/promoCodeTextView" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/promoCodeTextView" />
+
+                <ImageView
+                    android:id="@+id/couponImageView"
+                    android:layout_width="39dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_percentage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+                <TextView
+                    android:id="@+id/couponAvailableTextView"
+                    style="@style/M15.Coralito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/couponImageView"
+                    app:layout_constraintStart_toEndOf="@+id/couponImageView" />
+
+                <TextView
+                    android:id="@+id/couponViewButton"
+                    style="@style/B9.DodgerBlue"
+                    android:layout_width="43dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="@drawable/bg_shape_hawesblue_5_radius"
+                    android:gravity="center"
+                    android:text="@string/view"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/couponImageView" />
+
+                <TextView
+                    android:id="@+id/currentPromoCodeTitleTextView"
+                    style="@style/H3.Trout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:text="@string/promo_code"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/couponViewButton" />
+
+                <ImageView
+                    android:id="@+id/couponVerifiedImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="9dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_verified_promo_code"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/currentPromoCodeTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/currentPromoCodeTextView"
+                    app:layout_constraintTop_toTopOf="@+id/currentPromoCodeTextView" />
+
+                <TextView
+                    android:id="@+id/currentPromoCodeTextView"
+                    style="@style/P2.DodgerBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/currentPromoCodeTitleTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/clearCouponImageView"
+                    app:layout_constraintTop_toTopOf="@+id/currentPromoCodeTitleTextView" />
+
+                <ImageView
+                    android:id="@+id/clearCouponImageView"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_clear_promo_code"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/currentPromoCodeTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/currentPromoCodeTextView" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/botticelli60"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/currentPromoCodeTitleTextView" />
+
+                <TextView
+                    android:id="@+id/totalTitleTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/defaultViewMargin"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/total"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <TextView
+                    android:id="@+id/vatTitleTextView"
+                    style="@style/H2.Trout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/incl_vat"
+                    app:layout_constraintStart_toEndOf="@+id/totalTitleTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <TextView
+                    android:id="@+id/finalTotalTextView"
+                    style="@style/B24.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/defaultViewMargin"
+                    android:layout_marginBottom="21dp"
+                    android:gravity="end"
+                    android:text="@string/default_price_value"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <namit.retail_app.core.presentation.widget.LocationTimeView
+        android:id="@+id/locationTimeTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartDetailSimpleToolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkoutCartLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/defaultViewElevation"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/placeOrderBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/defaultViewMargin"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/defaultViewMargin"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_shape_dodgerbluer_15_radius"
+            android:foreground="?android:selectableItemBackgroundBorderless">
+
+            <TextView
+                android:id="@+id/proceedTextView"
+                style="@style/L1.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/place_your_order"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/finalTotalButtonTextView"
+                style="@style/R17.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/default_price_value"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@+id/proceedTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/proceedTextView"
+                app:layout_constraintTop_toTopOf="@+id/proceedTextView"
+                tools:text="฿1,211" />
+
+            <ImageView
+                android:id="@+id/basketImageView"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_basket_simple"
+                app:layout_constraintBottom_toBottomOf="@+id/proceedTextView"
+                app:layout_constraintEnd_toStartOf="@+id/proceedTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/proceedTextView"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/productAmountTextView"
+                style="@style/P3.White"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="@drawable/badge_round_corner_dodgerblue_1_stroke"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minWidth="18dp"
+                android:paddingStart="2dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="1dp"
+                android:text="@string/default_counter"
+                app:layout_constraintBottom_toTopOf="@id/basketImageView"
+                app:layout_constraintEnd_toEndOf="@id/basketImageView"
+                app:layout_constraintStart_toEndOf="@+id/basketImageView"
+                app:layout_constraintTop_toTopOf="@id/basketImageView"
+                tools:text="20" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emptyConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:translationZ="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cartDetailSimpleToolbar">
+
+        <namit.retail_app.core.presentation.widget.EmptyLayoutView
+            android:id="@+id/cartEmptyLayoutView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1224 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.FullScreen">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.FullScreen.WhiteStatusBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.FullScreen.BlackStatusBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
+    <style name="AppToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="SearchAppToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="AppToolbarDefault" parent="AppToolbar">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="AppToolbarBlack" parent="AppToolbar">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <!--Custom dialog animation-->
+    <style name="TranslateUpDownAnimation">
+        <item name="android:windowEnterAnimation">@anim/translate_up</item>
+        <item name="android:windowExitAnimation">@anim/translate_down</item>
+    </style>
+
+    <!--Custom dialog animation-->
+    <style name="TranslateFadeInFadeOutAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!--Font style H1-->
+    <style name="H1">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H1.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!--Font style H1.5-->
+    <style name="H1.5">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H1.5.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!--Font style H2-->
+    <style name="H2">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H2.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="H2.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="H2.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="H2.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="H2.Trout.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="H2.Trout.Medium">
+        <item name="android:fontFamily">@font/circular_medium</item>
+    </style>
+
+    <style name="H2.Trout.Normal.Medium">
+        <item name="android:fontFamily">@font/circular_medium</item>
+    </style>
+
+    <style name="H2.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="H2.Black85">
+        <item name="android:textColor">@color/black85</item>
+    </style>
+
+    <!--Font style H3-->
+    <style name="H3">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="H3.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="H3.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <style name="H3.Trout60">
+        <item name="android:textColor">@color/trout60</item>
+    </style>
+
+    <style name="H3.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="H3.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="H3.AzureRadiance">
+        <item name="android:textColor">@color/azureRadiance</item>
+    </style>
+
+    <style name="H3.DodgerBlue60">
+        <item name="android:textColor">@color/dodgerBlue60</item>
+    </style>
+
+    <style name="H3.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style H4-->
+    <style name="H4">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="H4.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="H4.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="H4.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="H4.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="H4.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="H4.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <style name="H4.BrightSun">
+        <item name="android:textColor">@color/brightSun</item>
+    </style>
+
+
+    <!--Font style H5-->
+    <style name="H5">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22.9sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="H5.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="H5.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style H6-->
+    <style name="H6">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="H6.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="H6.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="H6.Raven">
+        <item name="android:textColor">@color/raven</item>
+    </style>
+
+    <!--Font style P1-->
+    <style name="P1">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P1.DustyGray">
+        <item name="android:textColor">@color/dustyGray</item>
+    </style>
+
+    <style name="P1.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="P1.Concrete90">
+        <item name="android:textColor">@color/concrete90</item>
+    </style>
+
+    <style name="P1.BrightSun90">
+        <item name="android:textColor">@color/brightSun90</item>
+    </style>
+
+    <!--Font style P2-->
+    <style name="P2">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="P2.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="P2.Trout.Medium">
+        <item name="android:fontFamily">@font/circular_medium</item>
+    </style>
+
+    <style name="P2.Trout30">
+        <item name="android:textColor">@color/trout30</item>
+    </style>
+
+    <style name="P2.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <style name="P2.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="P2.Trout60">
+        <item name="android:textColor">@color/trout60</item>
+    </style>
+
+    <style name="P2.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <style name="P2.Trout80">
+        <item name="android:textColor">@color/trout80</item>
+    </style>
+
+    <style name="P2.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P2.PaleSky80">
+        <item name="android:textColor">@color/paleSky80</item>
+    </style>
+
+    <style name="P2.Raven">
+        <item name="android:textColor">@color/raven</item>
+    </style>
+
+    <style name="P2.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="P2.White70">
+        <item name="android:textColor">@color/white70</item>
+    </style>
+
+    <style name="P2.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="P2.DodgerBlue50">
+        <item name="android:textColor">@color/dodgerBlue50</item>
+    </style>
+
+    <style name="P2.GrayChateau80">
+        <item name="android:textColor">@color/grayChateau80</item>
+    </style>
+
+    <style name="P2.FrechGray">
+        <item name="android:textColor">@color/frenchGray</item>
+    </style>
+
+    <!--Font style P3-->
+    <style name="P3">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="P3.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P3.White.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P3.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="P3.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="P3.Trout60">
+        <item name="android:textColor">@color/trout60</item>
+    </style>
+
+    <style name="P3.Trout80">
+        <item name="android:textColor">@color/trout80</item>
+    </style>
+
+    <style name="P3.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <style name="P3.SunsetOrange">
+        <item name="android:textColor">@color/sunsetOrange</item>
+    </style>
+
+    <style name="P3.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <!--Font style P4-->
+    <style name="P4">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P4.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P4.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="P4.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style P5-->
+    <style name="P5">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P5.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P5.GrayChateau">
+        <item name="android:textColor">@color/grayChateau</item>
+    </style>
+
+    <!--Font style P6-->
+    <style name="P6">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P6.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="P6.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="P6.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="P6.Black50">
+        <item name="android:textColor">@color/black50</item>
+    </style>
+
+    <!--Font style P7-->
+    <style name="P7">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="P7.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style B1-->
+    <style name="B1">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">27sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="B1.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="B1.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!--Font style L1-->
+    <style name="L1">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="L1.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="L1.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <style name="L1.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="L1.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style L2-->
+    <style name="L2">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="L2.Coral">
+        <item name="android:textColor">@color/coral</item>
+    </style>
+
+    <!--Font style C1-->
+    <style name="C1">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C1.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style C2-->
+    <style name="C2">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C2.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style C3-->
+    <style name="C3">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C3.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style C4-->
+    <style name="C4">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">5sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C4.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!--Font style C5-->
+    <style name="C5">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C5.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style C6-->
+    <style name="C6">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C6.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style C7-->
+    <style name="C7">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C7.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style C8-->
+    <style name="C8">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C8.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="C8.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!--Font style C9-->
+    <style name="C9">
+        <item name="android:fontFamily">@font/prompt_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="C9.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Font style L3-->
+    <style name="L3">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Font style L4-->
+    <style name="L4">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="L4.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="L4.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="L4.Black50">
+        <item name="android:textColor">@color/black50</item>
+    </style>
+
+    <!--Button Pattern : WidgetName.TextColorBackgroundColor-->
+    <!--Button Style -->
+    <style name="MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="MaterialButtonUnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="MaterialButtonUnelevatedButton.H1">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialButtonUnelevatedButton.H1.DodgerBlueDodgerBlue20">
+        <item name="android:background">@drawable/shape_dodgerblue20_15_radius</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialButtonTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="MaterialButtonTextButton.H1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialButtonTextButton.H1.DodgerBlueWhite">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialButtonTextButton.H1.WhiteDodgerBlue">
+        <item name="backgroundTint">@color/dodgerBlue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialButtonTextButton.H1.Trout40Transparent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <!-- Text Style B9 Un-GuideStyle -->
+    <style name="B9">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="B9.Coral">
+        <item name="android:textColor">@color/coral</item>
+    </style>
+
+    <style name="B9.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="B9.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Text Style B26 Un-GuideStyle -->
+    <style name="B26">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="B26.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!-- Text Style B30 Un-GuideStyle -->
+    <style name="B30">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="B30.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="B30.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Text Style B18 Un-GuideStyle -->
+    <style name="B18">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="B18.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="B18.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="B18.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!-- Text Style B15 Un-GuideStyle -->
+    <style name="B15">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="B15.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="B15.FrenchGray">
+        <item name="android:textColor">@color/frenchGray</item>
+    </style>
+
+    <style name="B15.AzureRadiance">
+        <item name="android:textColor">@color/azureRadiance</item>
+    </style>
+
+
+    <style name="B15.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <style name="B15.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <style name="B15.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!-- Text Style B24 Un-GuideStyle -->
+    <style name="B24">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="B24.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="B24.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Text Style B24 Un-GuideStyle -->
+    <style name="B12">
+        <item name="android:fontFamily">@font/circular_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="B12.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="B12.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="B12.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <!-- Text Style M12 Un-GuideStyle -->
+    <style name="M12">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="M12.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="M12.FrenchGray">
+        <item name="android:textColor">@color/frenchGray</item>
+    </style>
+
+    <!-- Text Style M15 Un-GuideStyle -->
+    <style name="M15">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="M15.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="M15.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="M15.Trout50">
+        <item name="android:textColor">@color/trout50</item>
+    </style>
+
+    <style name="M15.Trout60">
+        <item name="android:textColor">@color/trout60</item>
+    </style>
+
+    <style name="M15.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <style name="M15.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="M15.White70">
+        <item name="android:textColor">@color/white70</item>
+    </style>
+
+    <style name="M15.Coralito">
+        <item name="android:textColor">@color/coralito</item>
+    </style>
+
+    <style name="M15.FrenchGray">
+        <item name="android:textColor">@color/frenchGray</item>
+    </style>
+
+    <!-- Text Style M18 Un-GuideStyle -->
+    <style name="M18">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="M18.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!--Text Style M35-->
+    <style name="M35">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="M35.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!-- Text Style TH1 GuideStyle -->
+    <style name="TH1">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Text Style R9 Un-GuideStyle -->
+    <style name="R9">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="R9.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="R9.Coralito">
+        <item name="android:textColor">@color/coralito</item>
+    </style>
+
+    <style name="R14">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="R14.Trout60">
+        <item name="android:textColor">@color/trout60</item>
+    </style>
+
+    <style name="R14.Concrete90">
+        <item name="android:textColor">@color/concrete90</item>
+    </style>
+
+    <!-- Text Style R15 Un-GuideStyle -->
+    <style name="R15">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="R15.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="R15.Trout70">
+        <item name="android:textColor">@color/trout70</item>
+    </style>
+
+    <style name="R15.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="R15.Trout40">
+        <item name="android:textColor">@color/trout40</item>
+    </style>
+
+    <!-- Text Style R16 Un-GuideStyle -->
+    <style name="R16">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="R16.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="R16.FrenchGray">
+        <item name="android:textColor">@color/frenchGray</item>
+    </style>
+
+    <style name="R16.Black50">
+        <item name="android:textColor">@color/black50</item>
+    </style>
+
+    <style name="MaterialEditText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MaterialEditText.White">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="MaterialEditText.Trout">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/trout</item>
+        <item name="android:textColorHint">@color/trout50</item>
+    </style>
+
+    <!-- Text Style R17 Un-GuideStyle -->
+    <style name="R17">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="R17.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <!-- Text Style R20 Un-GuideStyle -->
+    <style name="R20">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="R20.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <!-- Text Style R24 Un-GuideStyle -->
+    <style name="R24">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="R24.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Text Style R18 Un-GuideStyle -->
+    <style name="R18">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="R18.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+    <style name="R18.White80">
+        <item name="android:textColor">@color/white80</item>
+    </style>
+
+    <style name="R18.DodgerBlue">
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <!-- MaterialTextInputLayout -->
+    <style name="MaterialTextInputLayout" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/circular</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MaterialTextInputLayout.WhiteSmall">
+        <item name="android:textColor">@color/white80</item>
+        <item name="android:textColorHint">@color/white80</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/circular_medium</item>
+    </style>
+
+    <style name="MaterialTextInputLayout.White40Small">
+        <item name="android:textColor">@color/white40</item>
+        <item name="android:textColorHint">@color/white40</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/circular_medium</item>
+    </style>
+
+    <style name="MaterialTextInputLayout.WhiteHintText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="MaterialTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Button Style H1 -->
+    <style name="MaterialTextButton.H1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialTextButton.H5">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MaterialTextButton.N1">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialTextButton.B12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialTextButton.B12.WhiteDodgerBlue">
+        <item name="backgroundTint">@color/color_state_dodgerblue_dustygray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.WhiteDodgerBlue">
+        <item name="backgroundTint">@color/color_state_dodgerblue_dustygray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.WhiteDodgerBlueTropicalBlue">
+        <item name="backgroundTint">@color/color_state_dodgerblue_tropicalblue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.DodgerBlueWhite">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.CoralitoWhite">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@color/coralito</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.SunsetOrange">
+        <item name="backgroundTint">@color/color_state_sunsetorange_dustygray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.DodgerBlueTropicalBlue">
+        <item name="backgroundTint">@color/color_state_tropicalblue_dustygray</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.WhiteDodgerBlue30">
+        <item name="backgroundTint">@color/color_state_dodgerblue30_dodgerblue</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.DodgerBlue20DodgerBlue">
+        <item name="backgroundTint">@color/color_state_dodgerblue20_dustygray</item>
+        <item name="android:textColor">@color/color_state_dodgerblue_white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.GeraldineWhite">
+        <item name="backgroundTint">@color/geraldine</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.H1.KournikovaDodgerBlue">
+        <item name="backgroundTint">@color/kournikova</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialTextButton.H5.WhiteDodgerBlue">
+        <item name="backgroundTint">@color/color_state_dodgerblue_dustygray</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MaterialTextButton.N1.DodgerBlueTropicalBlue">
+        <item name="backgroundTint">@color/color_state_tropicalblue_dustygray</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="MaterialOutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:fontFamily">@font/circular_book</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="MaterialOutlinedButton.H1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MaterialOutlinedButton.H1.WhiteDodgerBlue">
+        <item name="strokeColor">@color/color_state_dodgerblue_dustygray</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="rippleColor">@color/dodgerBlue</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@color/color_state_dodgerblue_dustygray</item>
+    </style>
+
+    <style name="DefaultEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_trout_2_width</item>
+        <item name="android:textColor">@color/dodgerBlue</item>
+    </style>
+
+    <style name="DefaultEditText.H3">
+        <item name="android:fontFamily">@font/circular_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DefaultEditText.H3.Trout">
+        <item name="android:textColor">@color/trout</item>
+    </style>
+
+</resources>

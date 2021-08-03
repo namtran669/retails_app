@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="@dimen/defaultViewElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/orderImageView"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:background="@color/mischka"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iconStatusImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_circle_anakiwa"
+            android:padding="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderImageView" />
+
+        <TextView
+            android:id="@+id/merchantNameTextView"
+            style="@style/H2.Trout"
+            android:layout_width="135dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintStart_toEndOf="@id/iconStatusImageView"
+            app:layout_constraintTop_toBottomOf="@id/orderImageView" />
+
+        <TextView
+            android:id="@+id/arriveTimeTextView"
+            style="@style/P2.Trout70"
+            android:layout_width="205dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintStart_toEndOf="@id/iconStatusImageView"
+            app:layout_constraintTop_toBottomOf="@id/merchantNameTextView" />
+
+        <View
+            android:id="@+id/viewStroke"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/catskillWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arriveTimeTextView" />
+
+
+        <TextView
+            android:id="@+id/quantityProductTextView"
+            style="@style/P2.Trout"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="200dp"
+            android:background="@drawable/bg_catskillwhite_15_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewStroke" />
+
+
+        <TextView
+            android:id="@+id/locationPickupTextView"
+            style="@style/P2.Trout"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_catskillwhite_15_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quantityProductTextView" />
+
+
+        <View
+            android:id="@+id/viewStroke2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/catskillWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationPickupTextView" />
+
+        <TextView
+            android:id="@+id/totalPriceOrderTextView"
+            style="@style/B18.Trout"
+            android:layout_width="135dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_mischka_15_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewStroke2" />
+
+        <TextView
+            android:id="@+id/viewReceiptOrderTextView"
+            style="@style/B15.DodgerBlue"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_anakiwa_15_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalPriceOrderTextView" />
+
+        <TextView
+            android:id="@+id/trackingTextView"
+            style="@style/B15.White"
+            android:layout_width="105dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_anakiwa_15_radius"
+            android:paddingStart="25dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="12dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewStroke2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

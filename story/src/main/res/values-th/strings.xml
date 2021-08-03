@@ -1,0 +1,8 @@
+<resources>
+    <string name="content_read_more">อ่านเพิ่ม</string>
+    <string name="more_details">ดูรายละเอียด</string>
+    <string name="content_order">ออเดอร์</string>
+    <string name="close"> ปิด </string>
+    <string name="order_now">สั่งซื้อตอนนี้</string>
+
+</resources>

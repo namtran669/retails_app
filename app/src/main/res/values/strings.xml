@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeFresh</string>
+    <string name="update">Update</string>
+    <string name="close">Close</string>
+
+    <string name="detect_root_device_title">We’re sorry</string>
+    <string name="detect_root_device_message">Our app does not support your device. Please contact us for more information 02–014–2626</string>
+</resources>
